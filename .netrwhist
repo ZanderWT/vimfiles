@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='C:/Program Files/Vim/vim73'
+let g:netrw_dirhist_2='C:/Program Files/Vim/vim73/ftplugin'
+let g:netrw_dirhist_3='C:\Documents and Settings\zthompso\My Documents\bash'
+let g:netrw_dirhist_4='E:\RMS\Utilities\DBUtilClass\test2'
+let g:netrw_dirhist_5='E:/RMS/Utilities/DBUtilClass/test2'
+let g:netrw_dirhist_6='E:\RMSInterfaces\ExportInterfaces\CaseCit2Courts'
+let g:netrw_dirhist_7='E:/RMSInterfaces/ExportInterfaces/CaseCit2Courts'
+let g:netrw_dirhist_8='C:\Documents and Settings\All Users\Start Menu\Programs\Vim 7.3'
+let g:netrw_dirhist_9='E:/JavaWeb/build'
