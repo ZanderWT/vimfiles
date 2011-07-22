@@ -1,15 +1,12 @@
 "workvimrc:  Contains mappings, configurations and functions I use at work.
-"Mostly relating to navigating around tags, which I don't use at home
+if $COMPUTERNAME != "LPRGSTARSKY"
+  finish
+endif
 
 """"""""""""""""""""""""""""""""""
 "       Option Settings          "
 """"""""""""""""""""""""""""""""""
 set grepprg=egrep\ -nHi
-
-""""""""""""""""""""""""""""""""""
-"        AutoCommands            "
-""""""""""""""""""""""""""""""""""
-"Not using this autocmd anymore, using Project plugin instead
 
 """"""""""""""""""""""""""""""""""
 "           Mappings             "
@@ -29,38 +26,6 @@ vnoremap <silent> gS :call search('\(public\\|private\) \(sub\\|function\) \zs',
 """"""""""""""""""""""""""""""""""
 "          Functions             "
 """"""""""""""""""""""""""""""""""
-"jump to directly to a tag if it is found in the current file, otherwise
-"display the tag list
-function! SmartTagJump(split)
-    let l:cword = expand('<cword>')
-    if a:split == 1
-        exe 'tab split'
-    endif
-    let l:taglist = taglist('^' . l:cword . '$')
-    let l:foundMatch = 0
-    for l:tag in l:taglist
-        if match(l:tag['filename'], expand('%:t') . '$') != -1
-            "exe l:tag['cmd']
-            exe 'tag ' . tag['name']
-            let l:foundMatch = 1
-            break
-        endif
-    endfor
-    if l:foundMatch == 0
-        if &modified && a:split == 0
-          exe 'tab split'
-        endif
-        try
-          exe 'tj ' . l:cword
-        catch
-          exe "tabc"
-          echo "Tag not found!"
-        endtry
-    endif
-endfunction
-nnoremap <silent> ]t :call SmartTagJump(0)<CR>
-nnoremap <silent> ]T :call SmartTagJump(1)<CR>
-nnoremap [t <C-t>
 
 " Find file with search everything and edit it.
 function! Find(name)

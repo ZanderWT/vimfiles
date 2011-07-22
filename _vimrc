@@ -207,6 +207,7 @@ let g:tlist_vb_settings = 'vb;s:Subroutine;f:Function'
 "Config for EasyMotion
 hi EasyMotionShade guifg=#7f9f7f gui=NONE
 hi EasyMotionTarget guifg=khaki gui=NONE
+let g:EasyMotion_mapping_f = ',F'
 
 "Config for solarized color scheme
  function! ToggleBackground()
@@ -237,6 +238,38 @@ hi EasyMotionTarget guifg=khaki gui=NONE
 """""""""""""""""""""""""""""""
 "        Functions            "
 """""""""""""""""""""""""""""""
+"jump to directly to a tag if it is found in the current file, otherwise
+"display the tag list
+function! SmartTagJump(split)
+    let l:cword = expand('<cword>')
+    if a:split == 1
+        exe 'tab split'
+    endif
+    let l:taglist = taglist('^' . l:cword . '$')
+    let l:foundMatch = 0
+    for l:tag in l:taglist
+        if match(l:tag['filename'], expand('%:t') . '$') != -1
+            "exe l:tag['cmd']
+            exe 'tag ' . tag['name']
+            let l:foundMatch = 1
+            break
+        endif
+    endfor
+    if l:foundMatch == 0
+        if &modified && a:split == 0
+          exe 'tab split'
+        endif
+        try
+          exe 'tj ' . l:cword
+        catch
+          exe "tabc"
+          echo "Tag not found!"
+        endtry
+    endif
+endfunction
+nnoremap <silent> ]t :call SmartTagJump(0)<CR>
+nnoremap <silent> ]T :call SmartTagJump(1)<CR>
+nnoremap [t <C-t>
 
 "redirect to output of a command to a scratch buffer
 "useful for spammy commands like :hi, :reg, :au
