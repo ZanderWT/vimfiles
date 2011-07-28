@@ -2,6 +2,7 @@
 if $COMPUTERNAME != "LPRGSTARSKY"
   finish
 endif
+cd E:/ "start in E:/
 
 """"""""""""""""""""""""""""""""""
 "       Option Settings          "

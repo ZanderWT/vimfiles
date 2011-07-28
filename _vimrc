@@ -40,7 +40,6 @@ set undofile
 let mapleader="," "use , instead of \ in mappings with <leader>
 filetype plugin indent on
 colorscheme plains "preferred colorscheme
-cd E:/ "start in E:/
 """"""""""""""""""""""""""""""""""
 "         Autocommands           "
 """"""""""""""""""""""""""""""""""
