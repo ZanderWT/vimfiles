@@ -65,8 +65,6 @@ autocmd Filetype java inoremap <buffer> <C-S-Space> <C-X><C-P>
 "errorformat for parsing ant errors
 autocmd Filetype java setlocal makeprg=ant
 autocmd Filetype java setlocal efm=%A\ %#[javac]\ %f:%l:\ %m,%-Z\ %#[javac]\ %p^,%-C%.%#
-autocmd Filetype java nnoremap <buffer> <F7> :make -s "zbuild.xml" publish<CR>
-autocmd Filetype java nnoremap <buffer> <C-F7> :!start cmd /c "tomcatgo" & pause<CR>
 autocmd Filetype java nnoremap <buffer> <Leader>ce  :CVSEdit<CR>
 autocmd Filetype java nnoremap <buffer> <Leader>cE  :CVSEditors<CR>
 autocmd Filetype java nnoremap <buffer> <Leader>ct  :CVSUnedit<CR>

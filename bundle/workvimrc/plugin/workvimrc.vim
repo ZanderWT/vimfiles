@@ -24,6 +24,13 @@ nnoremap <silent> gs :call search('\(public\\|private\) \(sub\\|function\) \zs',
 nnoremap <silent> gS :call search('\(public\\|private\) \(sub\\|function\) \zs','b')<Enter>
 vnoremap <silent> gs :call search('\(public\\|private\) \(sub\\|function\) \zs','')<Enter>
 vnoremap <silent> gS :call search('\(public\\|private\) \(sub\\|function\) \zs','b')<Enter>
+
+""""""""""""""""""""""""""""""""
+"     Settings for java        "
+""""""""""""""""""""""""""""""""
+"Javaweb build and running javaweb tomcat server
+autocmd Filetype java nnoremap <buffer> <F7> :make -s "zbuild.xml" publish<CR>
+autocmd Filetype java nnoremap <buffer> <C-F7> :!start cmd /c "tomcatgo" & pause<CR>
 """"""""""""""""""""""""""""""""""
 "          Functions             "
 """"""""""""""""""""""""""""""""""
