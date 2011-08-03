@@ -208,6 +208,13 @@ hi EasyMotionShade guifg=#7f9f7f gui=NONE
 hi EasyMotionTarget guifg=khaki gui=NONE
 let g:EasyMotion_mapping_f = ',F'
 
+"Config for paramter_objects
+let g:no_parameter_object_maps=1
+vmap     <silent> i, <Plug>ParameterObjectI
+omap     <silent> i, <Plug>ParameterObjectI
+vmap     <silent> a, <Plug>ParameterObjectA
+omap     <silent> a, <Plug>ParameterObjectA
+
 "Config for solarized color scheme
  function! ToggleBackground()
      if (w:solarized_style=="dark")
