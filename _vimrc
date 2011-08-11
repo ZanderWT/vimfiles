@@ -205,6 +205,15 @@ omap     <silent> i, <Plug>ParameterObjectI
 vmap     <silent> a, <Plug>ParameterObjectA
 omap     <silent> a, <Plug>ParameterObjectA
 
+"Config for vcscommand
+nnoremap <leader>cE           :CVSEditors<CR>
+nnoremap <leader>cwv          :CVSWatchers<CR>
+nnoremap <leader>cwa          :CVSWatchAdd<CR>
+nnoremap <leader>cwf          :CVSWatchOff<CR>
+nnoremap <leader>ce           :CVSEdit<CR>
+nnoremap <leader>ct           :CVSUnedit<CR>
+nnoremap <leader>cwn          :CVSWatchOn<CR>
+
 "Config for solarized color scheme
  function! ToggleBackground()
      if (w:solarized_style=="dark")
