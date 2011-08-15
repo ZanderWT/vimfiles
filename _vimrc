@@ -32,7 +32,13 @@ set shiftwidth=2
 set tabstop=2
 set expandtab
 set laststatus=2 "always show the status line
-set guifont=Bitstream_Vera_Sans_Mono:h9,Courier_New:h9 "set font to bitstream vera sans mono if it's available, otherwise use courier new
+if has("gui_running")
+  if has("gui_win32")
+    set guifont=Bitstream_Vera_Sans_Mono:h9,Courier_New:h9 "set font to bitstream vera sans mono if it's available, otherwise use courier new
+  elseif has("gui_gtk2")
+    set guifont=Bitstream\ Vera\ Sans\ Mono\ 10
+  endif
+endif
 set number "show line numbers
 set undodir=~/_vimundo
 set undofile
@@ -43,7 +49,9 @@ colorscheme plains "preferred colorscheme
 "         Autocommands           "
 """"""""""""""""""""""""""""""""""
 autocmd Filetype cpp setlocal tags=./tags,tags,E:\PROGRA~1\DEVSTU~1\VC98\Include\tags
-autocmd GUIEnter * simalt ~x "start maximized
+if has("gui_running")
+  autocmd GUIEnter * simalt ~x "start maximized
+endif
 autocmd BufEnter * lcd %:p:h
 "reveal all folds
 autocmd BufRead  * normal zR 
