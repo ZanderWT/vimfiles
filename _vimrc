@@ -49,7 +49,7 @@ colorscheme plains "preferred colorscheme
 "         Autocommands           "
 """"""""""""""""""""""""""""""""""
 autocmd Filetype cpp setlocal tags=./tags,tags,E:\PROGRA~1\DEVSTU~1\VC98\Include\tags
-if has("gui_running")
+if has("gui_win32")
   autocmd GUIEnter * simalt ~x "start maximized
 endif
 autocmd BufEnter * lcd %:p:h
