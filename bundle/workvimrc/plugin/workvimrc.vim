@@ -29,8 +29,8 @@ vnoremap <silent> gS :call search('\(public\\|private\) \(sub\\|function\) \zs',
 "     Settings for java        "
 """"""""""""""""""""""""""""""""
 "Javaweb build and running javaweb tomcat server
-autocmd Filetype java nnoremap <buffer> <F7> :make -s "zbuild.xml" publish<CR>
-autocmd Filetype java nnoremap <buffer> <C-F7> :!start cmd /c "tomcatgo" & pause<CR>
+autocmd Filetype java,javascript,jsp nnoremap <buffer> <F7> :make -s "zbuild.xml" publish<CR>
+autocmd Filetype java,javascript,jsp nnoremap <buffer> <C-F7> :!start cmd /c "tomcatgo" & pause<CR>
 """"""""""""""""""""""""""""""""""
 "          Functions             "
 """"""""""""""""""""""""""""""""""

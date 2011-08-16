@@ -64,22 +64,22 @@ au BufWinEnter * if &fdm == 'indent' | setlocal foldmethod=manual | endif
 "     Settings for java        "
 """"""""""""""""""""""""""""""""
 "use java omnicompletion
-autocmd Filetype java setlocal omnifunc=javacomplete#Complete
-autocmd Filetype java setlocal completefunc=javacomplete#CompleteParamsInfo
-autocmd Filetype java setlocal tags=./tags,tags,E:/JavaWeb/tags,E:/jdk/src/tags
+autocmd Filetype java,javascript,jsp setlocal omnifunc=javacomplete#Complete
+autocmd Filetype java,javascript,jsp setlocal completefunc=javacomplete#CompleteParamsInfo
+autocmd Filetype java,javascript,jsp setlocal tags=./tags,tags,E:/JavaWeb/tags,E:/jdk/src/tags
 "mapping for code completetion
-autocmd Filetype java inoremap <buffer> <C-S-Space> <C-X><C-P>
+autocmd Filetype java,javascript,jsp inoremap <buffer> <C-S-Space> <C-X><C-P>
 "errorformat for parsing ant errors
-autocmd Filetype java setlocal makeprg=ant
-autocmd Filetype java setlocal efm=%A\ %#[javac]\ %f:%l:\ %m,%-Z\ %#[javac]\ %p^,%-C%.%#
-autocmd Filetype java nnoremap <buffer> <Leader>ce  :CVSEdit<CR>
-autocmd Filetype java nnoremap <buffer> <Leader>cE  :CVSEditors<CR>
-autocmd Filetype java nnoremap <buffer> <Leader>ct  :CVSUnedit<CR>
-autocmd Filetype java nnoremap <buffer> <Leader>cwv :CVSWatchers<CR>
-autocmd Filetype java nnoremap <buffer> <Leader>cwa :CVSWatchAdd<CR>
-autocmd Filetype java nnoremap <buffer> <Leader>cwn :CVSWatchOn<CR>
-autocmd Filetype java nnoremap <buffer> <Leader>cwf :CVSWatchOff<CR>
-autocmd Filetype java nnoremap <buffer> <Leader>cwf :CVSWatchRemove<CR>
+autocmd Filetype java,javascript,jsp setlocal makeprg=ant
+autocmd Filetype java,javascript,jsp setlocal efm=%A\ %#[javac]\ %f:%l:\ %m,%-Z\ %#[javac]\ %p^,%-C%.%#
+autocmd Filetype java,javascript,jsp nnoremap <buffer> <Leader>ce  :CVSEdit<CR>
+autocmd Filetype java,javascript,jsp nnoremap <buffer> <Leader>cE  :CVSEditors<CR>
+autocmd Filetype java,javascript,jsp nnoremap <buffer> <Leader>ct  :CVSUnedit<CR>
+autocmd Filetype java,javascript,jsp nnoremap <buffer> <Leader>cwv :CVSWatchers<CR>
+autocmd Filetype java,javascript,jsp nnoremap <buffer> <Leader>cwa :CVSWatchAdd<CR>
+autocmd Filetype java,javascript,jsp nnoremap <buffer> <Leader>cwn :CVSWatchOn<CR>
+autocmd Filetype java,javascript,jsp nnoremap <buffer> <Leader>cwf :CVSWatchOff<CR>
+autocmd Filetype java,javascript,jsp nnoremap <buffer> <Leader>cwf :CVSWatchRemove<CR>
 
 """"""""""""""""""""""""""""""""""
 "           Mappings             "
