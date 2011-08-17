@@ -44,7 +44,7 @@ set undodir=~/_vimundo
 set undofile
 let mapleader="," "use , instead of \ in mappings with <leader>
 filetype plugin indent on
-colorscheme plains "preferred colorscheme
+"colorscheme plains "preferred colorscheme
 """"""""""""""""""""""""""""""""""
 "         Autocommands           "
 """"""""""""""""""""""""""""""""""
@@ -244,7 +244,7 @@ nnoremap <leader>cwn          :CVSWatchOn<CR>
  "nnoremap <F1> :call ToggleBackground()<CR>
 " option name               default     optional
 "" ------------------------------------------------
-" g:solarized_termcolors=   256      "|   16
+ let g:solarized_termcolors=   256      "|   16
 " g:solarized_termtrans =   0        "|   1
 " g:solarized_degrade   =   0        "|   1
 " g:solarized_bold      =   1        "|   0
@@ -253,8 +253,8 @@ nnoremap <leader>cwn          :CVSWatchOn<CR>
 " g:solarized_style     =   'light'   "|   'light'
 " g:solarized_contrast  =   'normal' "|   'high' or 'low'
 "" ------------------------------------------------
-"set background=dark
-"colorscheme solarized
+set background=dark
+colorscheme solarized
 """""""""""""""""""""""""""""""
 "        Functions            "
 """""""""""""""""""""""""""""""
