@@ -31,6 +31,15 @@ vnoremap <silent> gS :call search('\(public\\|private\) \(sub\\|function\) \zs',
 "Javaweb build and running javaweb tomcat server
 autocmd Filetype java,javascript,jsp nnoremap <buffer> <F7> :make -s "zbuild.xml" publish<CR>
 autocmd Filetype java,javascript,jsp nnoremap <buffer> <C-F7> :!start cmd /c "tomcatgo" & pause<CR>
+
+""""""""""""""""""""""""""""""""""
+"    Solarized Color Scheme      "
+""""""""""""""""""""""""""""""""""
+if has("gui_win32")
+  colors plains " use plains colorscheme at work because the monitor sucks
+else
+  colors desert
+endif
 """"""""""""""""""""""""""""""""""
 "          Functions             "
 """"""""""""""""""""""""""""""""""
