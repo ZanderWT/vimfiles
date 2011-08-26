@@ -66,7 +66,7 @@ au BufWinEnter * if &fdm == 'indent' | setlocal foldmethod=manual | endif
 "use java omnicompletion
 autocmd Filetype java,javascript,jsp setlocal omnifunc=javacomplete#Complete
 autocmd Filetype java,javascript,jsp setlocal completefunc=javacomplete#CompleteParamsInfo
-autocmd Filetype java,javascript,jsp setlocal tags=./tags,tags,E:/JavaWeb/tags,E:/jdk/src/tags
+autocmd Filetype java,javascript,jsp setlocal tags=./tags,tags,E:/JavaWeb/tags,E:/jdk/src/tags,E:/libs/struts-1.3.10/tags
 "mapping for code completetion
 autocmd Filetype java,javascript,jsp inoremap <buffer> <C-S-Space> <C-X><C-P>
 "errorformat for parsing ant errors

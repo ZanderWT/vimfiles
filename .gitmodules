@@ -10,3 +10,6 @@
 [submodule "bundle/solarized"]
 	path = bundle/solarized
 	url = git://github.com/altercation/vim-colors-solarized.git
+[submodule "bundle/javacomplete"]
+	path = bundle/javacomplete
+	url = git://github.com/vim-scripts/javacomplete.git
