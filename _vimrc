@@ -52,7 +52,7 @@ autocmd Filetype cpp setlocal tags=./tags,tags,E:\PROGRA~1\DEVSTU~1\VC98\Include
 if has("gui_win32")
   autocmd GUIEnter * simalt ~x "start maximized
 endif
-autocmd BufEnter * lcd %:p:h
+"autocmd BufEnter * lcd %:p:h
 "reveal all folds
 autocmd BufRead  * normal zR 
 "Create folds based on indent and then set foldmethod to manual when openeing
@@ -65,7 +65,6 @@ au BufWinEnter * if &fdm == 'indent' | setlocal foldmethod=manual | endif
 """"""""""""""""""""""""""""""""
 "use java omnicompletion
 autocmd Filetype java,javascript,jsp setlocal omnifunc=javacomplete#Complete
-autocmd Filetype java,javascript,jsp setlocal completefunc=javacomplete#CompleteParamsInfo
 autocmd Filetype java,javascript,jsp setlocal tags=./tags,tags,E:/JavaWeb/tags,E:/jdk/src/tags,E:/libs/struts-1.3.10/tags
 "mapping for code completetion
 autocmd Filetype java,javascript,jsp inoremap <buffer> <C-S-Space> <C-X><C-P>
@@ -208,6 +207,10 @@ let g:Tlist_GainFocus_On_ToggleOpen = 1
 let g:Tlist_Close_On_Select = 1
 let g:tlist_vb_settings = 'vb;s:Subroutine;f:Function'
 
+"Config for Eclim:
+let g:taglisttoo_disabled = 1
+let g:EclimTaglistEnabled = 0
+
 "Config for EasyMotion
 hi EasyMotionShade guifg=#7f9f7f gui=NONE
 hi EasyMotionTarget guifg=khaki gui=NONE
@@ -221,6 +224,7 @@ vmap     <silent> a, <Plug>ParameterObjectA
 omap     <silent> a, <Plug>ParameterObjectA
 
 "Config for vcscommand
+let g:VCSCommandEnableBufferSetup=1
 nnoremap <leader>cE           :CVSEditors<CR>
 nnoremap <leader>cwv          :CVSWatchers<CR>
 nnoremap <leader>cwa          :CVSWatchAdd<CR>
@@ -255,6 +259,9 @@ nnoremap <leader>cwn          :CVSWatchOn<CR>
 "" ------------------------------------------------
 set background=dark
 colorscheme solarized
+
+"Config for SuperTab:
+let g:SuperTabDefaultCompletionType = "context"
 """""""""""""""""""""""""""""""
 "        Functions            "
 """""""""""""""""""""""""""""""

@@ -142,8 +142,8 @@ function! EditStrutsStackItem(fname, strutsItem)
 endfunction
 
 
-nnoremap <leader>jf :call EditStrutsStackItem(@%, "form") <CR>
-nnoremap <leader>ja :call EditStrutsStackItem(@%, "action") <CR>
-nnoremap <leader>jb :call EditStrutsStackItem(@%, "bean") <CR>
-nnoremap <leader>jp :call EditStrutsStackItem(@%, "jsp") <CR>
-nnoremap <leader>js :call EditStrutsStackItem(@%, "js") <CR>
+nnoremap <leader>jf :lcd %:p:h<CR>:call EditStrutsStackItem(@%, "form") <CR>
+nnoremap <leader>ja :lcd %:p:h<CR>:call EditStrutsStackItem(@%, "action") <CR>
+nnoremap <leader>jb :lcd %:p:h<CR>:call EditStrutsStackItem(@%, "bean") <CR>
+nnoremap <leader>jp :lcd %:p:h<CR>:call EditStrutsStackItem(@%, "jsp") <CR>
+nnoremap <leader>js :lcd %:p:h<CR>:call EditStrutsStackItem(@%, "js") <CR>
