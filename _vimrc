@@ -42,6 +42,7 @@ endif
 set number "show line numbers
 set undodir=~/_vimundo
 set undofile
+set directory=$HOME/.vimswp,. "use a separate directory for swap files
 let mapleader="," "use , instead of \ in mappings with <leader>
 filetype plugin indent on
 "colorscheme plains "preferred colorscheme
@@ -52,7 +53,7 @@ autocmd Filetype cpp setlocal tags=./tags,tags,E:\PROGRA~1\DEVSTU~1\VC98\Include
 if has("gui_win32")
   autocmd GUIEnter * simalt ~x "start maximized
 endif
-"autocmd BufEnter * lcd %:p:h
+autocmd BufEnter * lcd %:p:h
 "reveal all folds
 autocmd BufRead  * normal zR 
 "Create folds based on indent and then set foldmethod to manual when openeing

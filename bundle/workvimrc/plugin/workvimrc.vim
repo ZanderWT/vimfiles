@@ -32,6 +32,12 @@ vnoremap <silent> gS :call search('\(public\\|private\) \(sub\\|function\) \zs',
 autocmd Filetype java,javascript,jsp nnoremap <buffer> <F7> :make -s "zbuild.xml" publish<CR>
 autocmd Filetype java,javascript,jsp nnoremap <buffer> <C-F7> :!start cmd /c "tomcatgo" & pause<CR>
 
+"""""""""""""""""""""""""""""""
+"   settings for VB           "
+"""""""""""""""""""""""""""""""
+autocmd Filetype vb set tags+=E:\RMS\tags
+
+
 """"""""""""""""""""""""""""""""""
 "    Solarized Color Scheme      "
 """"""""""""""""""""""""""""""""""
