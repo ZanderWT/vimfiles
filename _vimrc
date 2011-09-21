@@ -53,7 +53,7 @@ autocmd Filetype cpp setlocal tags=./tags,tags,E:\PROGRA~1\DEVSTU~1\VC98\Include
 if has("gui_win32")
   autocmd GUIEnter * simalt ~x "start maximized
 endif
-autocmd BufEnter * lcd %:p:h
+"autocmd BufEnter * lcd %:p:h "Commenting this out because it breaks fugitive
 "reveal all folds
 autocmd BufRead  * normal zR 
 "Create folds based on indent and then set foldmethod to manual when openeing
@@ -65,10 +65,7 @@ au BufWinEnter * if &fdm == 'indent' | setlocal foldmethod=manual | endif
 "     Settings for java        "
 """"""""""""""""""""""""""""""""
 "use java omnicompletion
-autocmd Filetype java,javascript,jsp setlocal omnifunc=javacomplete#Complete
 autocmd Filetype java,javascript,jsp setlocal tags=./tags,tags,E:/JavaWeb/tags,E:/jdk/src/tags,E:/libs/struts-1.3.10/tags
-"mapping for code completetion
-autocmd Filetype java,javascript,jsp inoremap <buffer> <C-S-Space> <C-X><C-P>
 "errorformat for parsing ant errors
 autocmd Filetype java,javascript,jsp setlocal makeprg=ant
 autocmd Filetype java,javascript,jsp setlocal efm=%A\ %#[javac]\ %f:%l:\ %m,%-Z\ %#[javac]\ %p^,%-C%.%#
@@ -262,7 +259,7 @@ set background=dark
 colorscheme solarized
 
 "Config for SuperTab:
-let g:SuperTabDefaultCompletionType = "context"
+let g:SuperTabDefaultCompletionType = "<c-x><c-u>"
 """""""""""""""""""""""""""""""
 "        Functions            "
 """""""""""""""""""""""""""""""
