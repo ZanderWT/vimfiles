@@ -208,6 +208,8 @@ let g:tlist_vb_settings = 'vb;s:Subroutine;f:Function'
 "Config for Eclim:
 let g:taglisttoo_disabled = 1
 let g:EclimTaglistEnabled = 0
+let g:EclimSignLevel=2 "suppress warnings
+let g:EclimValidateSortResults='severity' "sort validation problems by severity
 
 "Config for EasyMotion
 hi EasyMotionShade guifg=#7f9f7f gui=NONE
