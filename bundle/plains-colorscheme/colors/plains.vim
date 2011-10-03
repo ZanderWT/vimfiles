@@ -17,10 +17,10 @@ hi Normal guifg=#faf4c6 guibg=#3f3f3f
 
 " highlight groups
 hi Cursor guibg=khaki guifg=slategrey
-hi DiffAdd      guibg=#6f6f6f gui=bold 
-hi DiffDelete   guifg=black guibg=#6f6f6f gui=bold
-hi DiffChange   guibg=#8f6f8f gui=bold
-hi DiffText     guibg=#af6f8f gui=bold
+hi DiffAdd      guibg=#4f4f4f gui=bold 
+hi DiffDelete   guifg=black guibg=#4f4f4f gui=bold
+hi DiffChange   guibg=#5f4f5f gui=bold
+hi DiffText     guibg=#6f2f3f gui=bold
 hi ErrorMsg     guifg=#EEEED0 guibg=red gui=none
 hi VertSplit    guifg=grey50 guibg=#c2bfa5 gui=none
 hi Folded       guifg=gold guibg=grey30 gui=none
