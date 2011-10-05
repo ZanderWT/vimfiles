@@ -10,3 +10,6 @@
 [submodule "bundle/solarized"]
 	path = bundle/solarized
 	url = git://github.com/altercation/vim-colors-solarized.git
+[submodule "bundle/pydoc"]
+	path = bundle/pydoc
+	url = git://github.com/fs111/pydoc.vim.git
