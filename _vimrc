@@ -190,7 +190,7 @@ hi Pmenu guifg=wheat guibg=#3f3f1f
 "      Plugin Configurations        "
 """""""""""""""""""""""""""""""""""""
 "Config for NERDTree:
-"nnoremap <silent> <F12> :NERDTreeToggle<CR>
+nnoremap <silent> <F12> :NERDTreeToggle<CR>
 let g:NERDTreeQuitOnOpen = 1 "close NERDtree after opening a file
 "Config for MRU:
 let g:MRU_Ignore_Case = 1
@@ -228,9 +228,6 @@ omap     <silent> i, <Plug>ParameterObjectI
 vmap     <silent> a, <Plug>ParameterObjectA
 omap     <silent> a, <Plug>ParameterObjectA
 
-"config for Project:
-nnoremap <silent> <F12> :Project<CR>
-let g:proj_flags='g'
 "Config for vcscommand
 let g:VCSCommandEnableBufferSetup=1
 nnoremap <leader>cE           :CVSEditors<CR>
@@ -268,7 +265,12 @@ nnoremap <leader>cwn          :CVSWatchOn<CR>
 set background=dark
 "colorscheme solarized
 "I'm still using plains everywhere.  I don't care, I like it
-colorscheme plains
+"Actually now i'm using solarized in the console
+if has("gui_running")
+  colorscheme plains
+else
+  colorscheme solarized
+endif
 
 "Config for SuperTab:
 let g:SuperTabDefaultCompletionType = "<c-x><c-u>"
