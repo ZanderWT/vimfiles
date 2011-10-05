@@ -13,10 +13,6 @@ set grepprg=egrep\ -nHi
 "           Mappings             "
 """"""""""""""""""""""""""""""""""
 let mapleader="," "use , instead of \ in mappings with <leader>
-"<F2> to toggle the tag list window
-noremap <silent> <F2> :TlistToggle <Enter>
-"<leader>f to start the Find command
-nnoremap <leader>f :F 
 "<leader>l to jump to a line in a VB program
 nnoremap <silent> <leader>l :VBLine 
 "jump to the next VB6 function or sub declaration
@@ -49,43 +45,6 @@ endif
 """"""""""""""""""""""""""""""""""
 "          Functions             "
 """"""""""""""""""""""""""""""""""
-
-" Find file with search everything and edit it.
-function! Find(name)
-  let l:list=split(system("es ".a:name),"\n")
-  let l:num=len(l:list)
-  if l:num < 1
-    echo "'".a:name."' not found"
-    return
-  endif
-  if l:num != 1
-    let l:count = 1
-    for l:item in l:list
-      let l:item = l:count.": ".l:item
-      echo l:item
-      let l:count+=1
-    endfor  
-    let l:input=input("Which ? (CR=nothing)\n")
-    if strlen(l:input)==0
-      return
-    endif
-    if strlen(substitute(l:input, "[0-9]", "", "g"))>0
-      echo "Not a number"
-      return
-    endif
-    if l:input<1 || l:input>l:num
-      echo "Out of range"
-      return
-    endif
-    let l:line=l:list[l:input - 1]
-  else
-    let l:line=l:list[0]
-  endif
-  let l:line=substitute(l:line, "^[^\t]*\t./", "", "")
-  execute ":e ".l:line
-endfunction
-command! -nargs=1 F :call Find("<args>")
-command! -nargs=1 Ft :tabe|:call Find("<args>")
 
 function! BuildBugsCleanUp()
   execute "sort i"
