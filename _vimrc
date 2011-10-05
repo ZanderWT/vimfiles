@@ -258,7 +258,9 @@ nnoremap <leader>cwn          :CVSWatchOn<CR>
 " g:solarized_contrast  =   'normal' "|   'high' or 'low'
 "" ------------------------------------------------
 set background=dark
-colorscheme solarized
+"colorscheme solarized
+"I'm still using plains everywhere.  I don't care, I like it
+colorscheme plains
 
 "Config for SuperTab:
 let g:SuperTabDefaultCompletionType = "<c-x><c-u>"
