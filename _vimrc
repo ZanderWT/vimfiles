@@ -190,7 +190,7 @@ hi Pmenu guifg=wheat guibg=#3f3f1f
 "      Plugin Configurations        "
 """""""""""""""""""""""""""""""""""""
 "Config for NERDTree:
-nnoremap <silent> <F12> :NERDTreeToggle<CR>
+"nnoremap <silent> <F12> :NERDTreeToggle<CR>
 let g:NERDTreeQuitOnOpen = 1 "close NERDtree after opening a file
 "Config for MRU:
 let g:MRU_Ignore_Case = 1
@@ -207,6 +207,8 @@ let g:Tlist_Show_One_File = 1
 let g:Tlist_GainFocus_On_ToggleOpen = 1
 let g:Tlist_Close_On_Select = 1
 let g:tlist_vb_settings = 'vb;s:Subroutine;f:Function'
+"<F2> to toggle the tag list window
+noremap <silent> <F2> :TlistToggle <Enter>
 
 "Config for Eclim:
 let g:taglisttoo_disabled = 1
@@ -226,6 +228,9 @@ omap     <silent> i, <Plug>ParameterObjectI
 vmap     <silent> a, <Plug>ParameterObjectA
 omap     <silent> a, <Plug>ParameterObjectA
 
+"config for Project:
+nnoremap <silent> <F12> :Project<CR>
+let g:proj_flags='g'
 "Config for vcscommand
 let g:VCSCommandEnableBufferSetup=1
 nnoremap <leader>cE           :CVSEditors<CR>
@@ -261,13 +266,60 @@ nnoremap <leader>cwn          :CVSWatchOn<CR>
 " g:solarized_contrast  =   'normal' "|   'high' or 'low'
 "" ------------------------------------------------
 set background=dark
-colorscheme solarized
+"colorscheme solarized
+"I'm still using plains everywhere.  I don't care, I like it
+colorscheme plains
 
 "Config for SuperTab:
 let g:SuperTabDefaultCompletionType = "<c-x><c-u>"
 """""""""""""""""""""""""""""""
 "        Functions            "
 """""""""""""""""""""""""""""""
+
+" Find file with search everything and edit it.
+function! Find(name)
+  if has("unix")
+    let l:cmd="locate"
+  else "windows
+    let l:cmd="es"
+  endif
+  let l:list=split(system(l:cmd." ".a:name),"\n")
+  let l:num=len(l:list)
+  if l:num < 1
+    echo "'".a:name."' not found"
+    return
+  endif
+  if l:num != 1
+    let l:count = 1
+    for l:item in l:list
+      let l:item = l:count.": ".l:item
+      echo l:item
+      let l:count+=1
+    endfor  
+    let l:input=input("Which ? (CR=nothing)\n")
+    if strlen(l:input)==0
+      return
+    endif
+    if strlen(substitute(l:input, "[0-9]", "", "g"))>0
+      echo "Not a number"
+      return
+    endif
+    if l:input<1 || l:input>l:num
+      echo "Out of range"
+      return
+    endif
+    let l:line=l:list[l:input - 1]
+  else
+    let l:line=l:list[0]
+  endif
+  let l:line=substitute(l:line, "^[^\t]*\t./", "", "")
+  execute ":e ".l:line
+endfunction
+command! -nargs=1 F :call Find("<args>")
+command! -nargs=1 Ft :tabe|:call Find("<args>")
+"<leader>f to start the Find command
+nnoremap <leader>f :F 
+
 "jump to directly to a tag if it is found in the current file, otherwise
 "display the tag list
 function! SmartTagJump(split)
