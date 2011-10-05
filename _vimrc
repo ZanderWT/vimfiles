@@ -172,6 +172,9 @@ vnoremap Y y$
 "< C-> > and < C-< > to move through the quickfix list
 nnoremap <silent> <C-,> :cprev<CR>
 nnoremap <silent> <C-,> :cnext<CR>
+"ctrl-h and ctrl-l to move to the beginning and end of a line
+nnoremap <ctrl-h> ^
+nnoremap <ctrl-l> $
 """""""""""""""""""""""""
 "     color groups      "
 """""""""""""""""""""""""
