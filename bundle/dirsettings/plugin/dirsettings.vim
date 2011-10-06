@@ -28,16 +28,18 @@ au dirsettings BufNewFile,BufReadPost * call SourceFileUpward('.vimdir')
 " autocmd line.
 "
 func! SourceFileUpward(fname)
-    let s=FindFileUpward(a:fname)
-    if filereadable(s)
-        exe 'sou ' . s
-    endif
+    let l:flist=FindFileUpward(a:fname)
+    for l:fname in reverse(l:flist)
+      if filereadable(l:fname)
+          exe 'sou ' . l:fname
+      endif
+    endfor
 endfunc
 
 "
 " Search upward for the given file.
 "
 func! FindFileUpward(fname)
-    let s=findfile(a:fname, expand("%:p:h") . ';')
-    return s
+    let l:flist=findfile(a:fname, expand("%:p:h") . ';', -1)
+    return l:flist
 endfunc
