@@ -7,7 +7,6 @@ call pathogen#helptags()
 "      Sourced files           "
 """"""""""""""""""""""""""""""""
 source $VIMRUNTIME/vimrc_example.vim
-
 """"""""""""""""""""""""""""""""
 "          Set Options         "
 """"""""""""""""""""""""""""""""
@@ -49,7 +48,6 @@ filetype plugin indent on
 """"""""""""""""""""""""""""""""""
 "         Autocommands           "
 """"""""""""""""""""""""""""""""""
-autocmd Filetype cpp setlocal tags=./tags,tags,E:\PROGRA~1\DEVSTU~1\VC98\Include\tags
 if has("gui_win32")
   autocmd GUIEnter * simalt ~x "start maximized
 endif
@@ -60,6 +58,8 @@ autocmd BufRead  * normal zR
 "a buffer
 au BufReadPre * setlocal foldmethod=indent
 au BufWinEnter * if &fdm == 'indent' | setlocal foldmethod=manual | endif
+"automatically source the _vimrc file when writing it
+au BufWritePost _vimrc so %
 
 """"""""""""""""""""""""""""""""
 "     Settings for java        "
@@ -357,7 +357,7 @@ nnoremap [t <C-t>
 "useful for spammy commands like :hi, :reg, :au
 "includes a mapping <leader>r to call the function
 function! RedirectToScratch(cmd)
-  tabnew
+  new
   :set buftype=nofile
   :set bufhidden=hide
   :setlocal noswapfile

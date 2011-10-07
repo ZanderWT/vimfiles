@@ -9,7 +9,10 @@ cd E:/ "start in E:/
 """"""""""""""""""""""""""""""""""
 set grepprg=egrep\ -nHi
 
-
+""""""""""""""""""""""""""""""""""
+"          AutoCommands          "
+""""""""""""""""""""""""""""""""""
+autocmd Filetype cpp setlocal tags=./tags,tags,E:\PROGRA~1\DEVSTU~1\VC98\Include\tags
 
 """"""""""""""""""""""""""""""""""
 "          Functions             "
