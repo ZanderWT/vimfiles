@@ -171,8 +171,8 @@ vnoremap Y y$
 nnoremap <silent> <C-,> :cprev<CR>
 nnoremap <silent> <C-,> :cnext<CR>
 "ctrl-h and ctrl-l to move to the beginning and end of a line
-nnoremap <ctrl-h> ^
-nnoremap <ctrl-l> $
+nnoremap <c-h> ^
+nnoremap <c-l> $
 """""""""""""""""""""""""
 "     color groups      "
 """""""""""""""""""""""""
