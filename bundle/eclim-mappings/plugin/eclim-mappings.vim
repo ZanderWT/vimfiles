@@ -6,4 +6,7 @@ nnoremap <silent> <leader>jS :JavaSearch<CR>
 nnoremap <silent> <leader>jd :JavaDocSearch<CR>
 nnoremap <silent> <leader>jv :Validate<CR>
 nnoremap <silent> <leader>jc :JavaCorrect<CR>
+nnoremap <silent> <leader>jim :JavaImportMissing<CR>
+nnoremap <silent> <leader>jis :JavaImportSort<CR>
+nnoremap <silent> <leader>jic :JavaImportClean<CR>
 
