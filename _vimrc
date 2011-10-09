@@ -213,6 +213,7 @@ let g:taglisttoo_disabled = 1
 let g:EclimTaglistEnabled = 0
 let g:EclimSignLevel=2 "suppress warnings
 let g:EclimValidateSortResults='severity' "sort validation problems by severity
+let g:EclimJavaImportPackageSeparationLevel=0 "don't add newlines between import statements
 
 "Config for EasyMotion
 hi EasyMotionShade guifg=#7f9f7f gui=NONE
