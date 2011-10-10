@@ -59,7 +59,7 @@ autocmd BufRead  * normal zR
 au BufReadPre * setlocal foldmethod=indent
 au BufWinEnter * if &fdm == 'indent' | setlocal foldmethod=manual | endif
 "automatically source the _vimrc file when writing it
-au BufWritePost _vimrc so %
+au BufWritePost _vimrc so $MYVIMRC
 
 """"""""""""""""""""""""""""""""
 "     Settings for java        "
