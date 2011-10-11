@@ -22,7 +22,7 @@ set guioptions+=c  "Use console dialogs instead of popups
 set confirm "confirm save/discard/cancel when abandoning a buffer
 set nobackup "Don't leave backup around after writing the file
 set writebackup "Don't leave backup around after writing the file
-set nowrap "no line wrapping (A mapping below binds F6 to toggle line wrapping)
+set nowrap "no line wrapping (A mapping below binds <C-F6> to toggle line wrapping)
 set ic "ignore case for searches
 set smartcase "do not ignore case in search if the search query contains at least one uppercase letter
 set clipboard=unnamed "set the default register for pasting and yanking to the windows clipboard
@@ -39,25 +39,24 @@ if has("gui_running")
   endif
 endif
 set number "show line numbers
+set undofile "use persistent undofiles to keep track of undo history betweem vim sessions
 set undodir=~/_vimundo
-set undofile
 set directory=$HOME/.vimswp,. "use a separate directory for swap files
 let mapleader="," "use , instead of \ in mappings with <leader>
 filetype plugin indent on
-"colorscheme plains "preferred colorscheme
 """"""""""""""""""""""""""""""""""
 "         Autocommands           "
 """"""""""""""""""""""""""""""""""
 if has("gui_win32")
   autocmd GUIEnter * simalt ~x "start maximized
 endif
-"autocmd BufEnter * lcd %:p:h "Commenting this out because it breaks fugitive
 "reveal all folds
 autocmd BufRead  * normal zR 
 "Create folds based on indent and then set foldmethod to manual when openeing
 "a buffer
 au BufReadPre * setlocal foldmethod=indent
 au BufWinEnter * if &fdm == 'indent' | setlocal foldmethod=manual | endif
+
 "automatically source the _vimrc file when writing it
 au BufWritePost _vimrc so $MYVIMRC
 au BufWritePost .vimrc so $MYVIMRC
