@@ -60,15 +60,13 @@ au BufReadPre * setlocal foldmethod=indent
 au BufWinEnter * if &fdm == 'indent' | setlocal foldmethod=manual | endif
 "automatically source the _vimrc file when writing it
 au BufWritePost _vimrc so $MYVIMRC
+au BufWritePost .vimrc so $MYVIMRC
 
 """"""""""""""""""""""""""""""""
 "     Settings for java        "
 """"""""""""""""""""""""""""""""
 "use java omnicompletion
 autocmd Filetype java,javascript,jsp setlocal tags=./tags,tags,E:/JavaWeb/tags,E:/jdk/src/tags,E:/libs/struts-1.3.10/tags
-"errorformat for parsing ant errors
-autocmd Filetype java,javascript,jsp setlocal makeprg=ant
-autocmd Filetype java,javascript,jsp setlocal efm=%A\ %#[javac]\ %f:%l:\ %m,%-Z\ %#[javac]\ %p^,%-C%.%#
 autocmd Filetype java,javascript,jsp nnoremap <buffer> <Leader>ce  :CVSEdit<CR>
 autocmd Filetype java,javascript,jsp nnoremap <buffer> <Leader>cE  :CVSEditors<CR>
 autocmd Filetype java,javascript,jsp nnoremap <buffer> <Leader>ct  :CVSUnedit<CR>
@@ -167,9 +165,9 @@ vnoremap <silent> <leader>P "0P
 "Y to yank from the cursor to the end of the line
 nnoremap Y y$
 vnoremap Y y$
-"< C-> > and < C-< > to move through the quickfix list
-nnoremap <silent> <C-,> :cprev<CR>
-nnoremap <silent> <C-,> :cnext<CR>
+"]e and [e to jump to next and previous error
+nnoremap <silent> [e :cprev<CR>
+nnoremap <silent> ]e :cnext<CR>
 "ctrl-h and ctrl-l to move to the beginning and end of a line
 nnoremap <c-h> ^
 nnoremap <c-l> $
