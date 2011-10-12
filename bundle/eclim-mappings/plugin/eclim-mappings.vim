@@ -10,4 +10,8 @@ nnoremap <silent> <leader>jmi :JavaImpl<CR>
 nnoremap <leader>jr :JavaRename 
 nnoremap <silent> <leader>jS :JavaSearch<CR>
 nnoremap <silent> <leader>js :JavaSearchContext<CR>
+"]e and [e to jump to next and previous error
+nnoremap <silent> [e :lprev<CR>
+nnoremap <silent> ]e :lnext<CR>
+
 

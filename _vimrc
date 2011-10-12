@@ -164,9 +164,6 @@ vnoremap <silent> <leader>P "0P
 "Y to yank from the cursor to the end of the line
 nnoremap Y y$
 vnoremap Y y$
-"]e and [e to jump to next and previous error
-nnoremap <silent> [e :cprev<CR>
-nnoremap <silent> ]e :cnext<CR>
 "ctrl-h and ctrl-l to move to the beginning and end of a line
 nnoremap <c-h> ^
 nnoremap <c-l> $
