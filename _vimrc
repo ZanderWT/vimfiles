@@ -167,6 +167,8 @@ vnoremap Y y$
 "ctrl-h and ctrl-l to move to the beginning and end of a line
 nnoremap <c-h> ^
 nnoremap <c-l> $
+"Ctrl-J to split a line, like Shift-J joins two lines
+nnoremap <C-J> gEa<CR><ESC>ew
 """""""""""""""""""""""""
 "     color groups      "
 """""""""""""""""""""""""
