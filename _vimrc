@@ -169,6 +169,10 @@ nnoremap <c-h> ^
 nnoremap <c-l> $
 "Ctrl-J to split a line, like Shift-J joins two lines
 nnoremap <C-J> gEa<CR><ESC>ew
+"<leader>cd to change local current working directory to the directory of the
+"current file
+nnoremap <silent> <leader>cd :lcd %:p:h<CR>
+
 """""""""""""""""""""""""
 "     color groups      "
 """""""""""""""""""""""""
