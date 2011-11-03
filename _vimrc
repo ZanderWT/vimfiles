@@ -265,7 +265,7 @@ set background=dark
 "colorscheme solarized
 "I'm still using plains everywhere.  I don't care, I like it
 "Actually now i'm using solarized in the console
-if has("gui_running")
+if has("gui_running") || has("win32")
   colorscheme plains
 else
   colorscheme solarized
