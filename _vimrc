@@ -237,39 +237,8 @@ nnoremap <leader>ce           :CVSEdit<CR>
 nnoremap <leader>ct           :CVSUnedit<CR>
 nnoremap <leader>cwn          :CVSWatchOn<CR>
 
-"Config for solarized color scheme
- function! ToggleBackground()
-     if (w:solarized_style=="dark")
-
-     let w:solarized_style="light"
-     colorscheme solarized
- else
-     let w:solarized_style="dark"
-     colorscheme solarized
- endif
- endfunction
- command! Togbg call ToggleBackground()
- "nnoremap <F1> :call ToggleBackground()<CR>
-" option name               default     optional
-"" ------------------------------------------------
- let g:solarized_termcolors=   256      "|   16
-" g:solarized_termtrans =   0        "|   1
-" g:solarized_degrade   =   0        "|   1
-" g:solarized_bold      =   1        "|   0
-" g:solarized_underline =   1        "|   0
-" g:solarized_italic    =   1        "|   colorscheme solarized
-" g:solarized_style     =   'light'   "|   'light'
-" g:solarized_contrast  =   'normal' "|   'high' or 'low'
-"" ------------------------------------------------
-set background=dark
-"colorscheme solarized
-"I'm still using plains everywhere.  I don't care, I like it
-"Actually now i'm using solarized in the console
-if has("gui_running") || has("win32")
-  colorscheme plains
-else
-  colorscheme solarized
-endif
+"use the plains colorscheme
+colorscheme plains
 
 "Config for SuperTab:
 let g:SuperTabDefaultCompletionType = "<c-x><c-u>"
