@@ -242,6 +242,12 @@ colorscheme plains
 
 "Config for SuperTab:
 let g:SuperTabDefaultCompletionType = "<c-x><c-u>"
+
+"Config for Gundo:
+nnoremap <silent> <F9> :GundoToggle<CR>
+vnoremap <silent> <F9> :GundoToggle<CR>
+let g:gundo_preview_bottom=1
+let g:gundo_right=1
 """""""""""""""""""""""""""""""
 "        Functions            "
 """""""""""""""""""""""""""""""
