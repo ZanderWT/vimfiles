@@ -16,7 +16,7 @@ hi Normal guifg=#faf4c6 guibg=#3f3f3f
 "hi Normal guifg=wheat guibg=#3f3f3f
 
 " highlight groups
-hi Cursor guibg=khaki guifg=slategrey
+hi Cursor       guibg=khaki guifg=slategrey
 hi DiffAdd      guibg=#4f4f4f gui=bold 
 hi DiffDelete   guifg=black guibg=#4f4f4f gui=bold
 hi DiffChange   guibg=#5f4f5f gui=bold
@@ -36,8 +36,11 @@ hi SpecialKey   guifg=yellowgreen gui=none
 hi StatusLine   guifg=black guibg=tan gui=none
 hi StatusLineNC guifg=grey30 guibg=#c2bfa5 gui=none
 hi Title        guifg=indianred gui=none
-hi Visual       gui=none guifg=khaki guibg=#005879 gui=none
+hi Visual       guibg=#6f2f3f gui=bold
 hi WarningMsg   guifg=#EEEED0 guibg=red gui=none
+hi Pmenu        guibg=#4f4f4f guifg=khaki
+hi PmenuSel     guifg=khaki guibg=#005879 
+hi PmenuSbar    guifg=#ccccb0 guibg=#454545 
 
 " syntax highlighting groups
 hi Comment          guifg=#7f9f7f gui=NONE
