@@ -16,9 +16,6 @@
 [submodule "bundle/LustyExplorer"]
 	path = bundle/LustyExplorer
 	url = git://github.com/vim-scripts/LustyExplorer.git
-[submodule "bundle/ctrlp"]
-	path = bundle/ctrlp
-	url = git://github.com/kien/ctrlp.vim.git
 [submodule "bundle/gundo"]
 	path = bundle/gundo
 	url = git://github.com/sjl/gundo.vim.git
