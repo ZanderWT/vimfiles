@@ -42,6 +42,7 @@ set number "show line numbers
 set undofile "use persistent undofiles to keep track of undo history betweem vim sessions
 set undodir=~/_vimundo
 set directory=$HOME/.vimswp,. "use a separate directory for swap files
+set completeopt=menuone,longest
 let mapleader="," "use , instead of \ in mappings with <leader>
 filetype plugin indent on
 """"""""""""""""""""""""""""""""""
@@ -194,7 +195,6 @@ let g:NERDTreeQuitOnOpen = 1 "close NERDtree after opening a file
 let g:MRU_Ignore_Case = 1
 
 "Config for OmniCppComplete:
-set completeopt-=preview
 let OmniCpp_NamespaceSearch = 2
 
 "Config for TagList

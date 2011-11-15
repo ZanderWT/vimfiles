@@ -16,7 +16,7 @@ set grepprg=egrep\ -nHi
 """"""""""""""""""""""""""""""""""
 "          AutoCommands          "
 """"""""""""""""""""""""""""""""""
-autocmd Filetype cpp setlocal tags=./tags,tags,E:\PROGRA~1\DEVSTU~1\VC98\Include\tags
+autocmd Filetype cpp setlocal tags+=./tags,tags,E:\PROGRA~1\DEVSTU~1\VC98\Include\tags
 
 """"""""""""""""""""""""""""""""""
 "          Functions             "
