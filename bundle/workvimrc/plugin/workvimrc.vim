@@ -2,11 +2,11 @@
 if $COMPUTERNAME != "LPRGSTARSKY"
   finish
 endif
-if has("win32")
-  cd E:/ "start in E:/
-else
-  cd /cygdrive/e "start in /cygdrive/e for cygwin
-endif
+"if has("win32")
+"  cd E:/ "start in E:/
+"else
+"  cd /cygdrive/e "start in /cygdrive/e for cygwin
+"endif
 
 """"""""""""""""""""""""""""""""""
 "       Option Settings          "
