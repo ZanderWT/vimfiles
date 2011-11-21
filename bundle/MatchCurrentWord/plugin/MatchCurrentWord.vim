@@ -1,3 +1,4 @@
+"zthompso 11/21/2011: created
 "plugin to always highlight the current word
 hi clear MatchCurrentWord
 hi MatchCurrentWord guibg=#4f4f4f 
