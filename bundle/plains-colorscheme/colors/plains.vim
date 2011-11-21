@@ -36,7 +36,7 @@ hi SpecialKey   guifg=yellowgreen gui=none
 hi StatusLine   guifg=black guibg=tan gui=none
 hi StatusLineNC guifg=grey30 guibg=#c2bfa5 gui=none
 hi Title        guifg=indianred gui=none
-hi Visual       guibg=#6f2f3f gui=bold
+hi Visual       guifg=khaki guibg=#005879
 hi WarningMsg   guifg=#EEEED0 guibg=red gui=none
 hi Pmenu        guibg=#4f4f4f guifg=khaki
 hi PmenuSel     guifg=khaki guibg=#005879 
