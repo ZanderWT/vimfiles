@@ -1,4 +1,7 @@
 set nocompatible
+if has("win32")
+  set runtimepath+=~/.vim
+endif
 filetype off
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
