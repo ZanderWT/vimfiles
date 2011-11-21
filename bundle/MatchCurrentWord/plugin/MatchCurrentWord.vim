@@ -18,7 +18,12 @@ function! MatchWord()
   else
     let l:matchID = 4
   endif
+  if exists('g:MatchCurrentWord_priority')
+    let l:matchPriority = g:MatchCurrentWord_priority
+  else
+    let l:matchPriority = -1
+  endif
   silent! call matchdelete(l:matchID)
-  call matchadd(l:hlGroup, '\<' . expand('<cword>') . '\>', 10, l:matchID)
+  call matchadd(l:hlGroup, '\<' . expand('<cword>') . '\>', l:matchPriority, l:matchID)
 endfunction
 
