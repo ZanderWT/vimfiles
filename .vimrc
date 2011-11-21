@@ -43,8 +43,8 @@ if has("gui_running")
 endif
 set number "show line numbers
 set undofile "use persistent undofiles to keep track of undo history betweem vim sessions
-set undodir=~/_vimundo
-set directory=$HOME/.vimswp,. "use a separate directory for swap files
+set undodir=~/.vimundo
+set directory=~/.vimswp,. "use a separate directory for swap files
 set completeopt=menuone,longest
 let mapleader="," "use , instead of \ in mappings with <leader>
 filetype plugin indent on
