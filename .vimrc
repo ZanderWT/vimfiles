@@ -1,6 +1,7 @@
 """"""""""""""""""""""""""""""""
 "        Preamble              "
 """"""""""""""""""""""""""""""""
+set fileformats=unix,dos
 set nocompatible
 if has("win32")
   set runtimepath+=~/.vim
