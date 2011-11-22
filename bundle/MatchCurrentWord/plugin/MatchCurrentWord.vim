@@ -24,6 +24,5 @@ function! MatchWord()
     let l:matchPriority = -1
   endif
   silent! call matchdelete(l:matchID)
-  call matchadd(l:hlGroup, '\<' . expand('<cword>') . '\>', l:matchPriority, l:matchID)
+  call matchadd(l:hlGroup, '\V\<' . escape(expand('<cword>'), '\') . '\>', l:matchPriority, l:matchID)
 endfunction
-
