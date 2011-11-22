@@ -1,3 +1,6 @@
+""""""""""""""""""""""""""""""""
+"        Preamble              "
+""""""""""""""""""""""""""""""""
 set nocompatible
 if has("win32")
   set runtimepath+=~/.vim
