@@ -7,8 +7,7 @@ if has("win32")
   set runtimepath+=~/.vim
 endif
 filetype off
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
+call pathogen#infect('~/.vim/bundle')
 
 """"""""""""""""""""""""""""""""
 "      Sourced files           "
@@ -376,4 +375,3 @@ function! MyDiff()
   endif
   silent execute '!' . cmd . ' ' . opt . arg1 . ' ' . arg2 . ' > ' . arg3 . eq
 endfunction
-
