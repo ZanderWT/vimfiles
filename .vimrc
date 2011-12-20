@@ -68,6 +68,8 @@ au BufWinEnter * if &fdm == 'indent' | setlocal foldmethod=manual | endif
 au BufWritePost _vimrc so $MYVIMRC
 au BufWritePost .vimrc so $MYVIMRC
 
+"delete cvs and fugitive diff buffers on close
+autocmd BufReadPost fugitive://* set bufhidden=delete
 """"""""""""""""""""""""""""""""
 "     Settings for java        "
 """"""""""""""""""""""""""""""""
@@ -115,12 +117,12 @@ vnoremap <S-Space> 10<c-y>
 nnoremap <silent> <Tab> :BufExplorer<CR>
 "s-tab to open the bufexpl window in a split window
 nnoremap <silent> <S-Tab> :BufExplorerHorizontalSplit<CR> 
-"` to jump to the next buffer
-nnoremap <silent> ` :bnext<CR>
-nnoremap <silent> ~ :bprev<CR>
 "for some reason the above mapping of <Tab> overwrites <Ctrl-I>, this next
 "mapping restores it to <Ctrl-U>.
 nnoremap <C-U> <C-I>
+"` to jump to the next buffer
+nnoremap <silent> ` :bnext<CR>
+nnoremap <silent> ~ :bprev<CR>
 "<CR> in normal mode to insert a new blank line.
 nnoremap <CR> o<Esc>
 "jump to the next string enclosed by quotes with s and S
@@ -179,6 +181,8 @@ nnoremap <C-J> gEa<CR><ESC>ew
 "<leader>cd to change local current working directory to the directory of the
 "current file
 nnoremap <silent> <leader>cd :lcd %:p:h<CR>
+nnoremap <silent> > :cnext<CR>
+nnoremap <silent> < :cprevious<CR>
 
 """""""""""""""""""""""""
 "     color groups      "
