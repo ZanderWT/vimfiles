@@ -6,8 +6,8 @@ set nocompatible
 if has("win32")
   set runtimepath+=~/.vim
 endif
-filetype off
 call pathogen#infect('~/.vim/bundle')
+filetype plugin indent on
 
 """"""""""""""""""""""""""""""""
 "      Sourced files           "
@@ -50,7 +50,6 @@ set undodir=~/.vimundo
 set directory=~/.vimswp,. "use a separate directory for swap files
 set completeopt=menuone,longest
 let mapleader="," "use , instead of \ in mappings with <leader>
-filetype plugin indent on
 """"""""""""""""""""""""""""""""""
 "         Autocommands           "
 """"""""""""""""""""""""""""""""""
@@ -177,7 +176,7 @@ vnoremap Y y$
 nnoremap <c-h> ^
 nnoremap <c-l> $
 "Ctrl-J to split a line, like Shift-J joins two lines
-nnoremap <C-J> gEa<CR><ESC>ew
+nnoremap <C-J> i<CR><ESC>
 "<leader>cd to change local current working directory to the directory of the
 "current file
 nnoremap <silent> <leader>cd :lcd %:p:h<CR>
@@ -224,6 +223,7 @@ let g:EclimTaglistEnabled = 0
 let g:EclimSignLevel=2 "suppress warnings
 let g:EclimValidateSortResults='severity' "sort validation problems by severity
 let g:EclimJavaImportPackageSeparationLevel=0 "don't add newlines between import statements
+let g:EclimXmlValidate=0 "don't validate xml files
 
 "Config for EasyMotion
 hi EasyMotionShade guifg=#7f9f7f gui=NONE
