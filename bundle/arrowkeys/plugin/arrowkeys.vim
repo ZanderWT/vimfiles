@@ -72,8 +72,8 @@ function! SetArrowKeysAsTextShifters()
     nnoremap <silent> <C-Down> <Esc>:call AddEmptyLineBelow()<CR>
  
     " visual mode
-    vnoremap <silent> <Left> <
-    vnoremap <silent> <Right> >
+    vnoremap <silent> <Left> <gv
+    vnoremap <silent> <Right> >gv
     vnoremap <silent> <Up> <Esc>:call BubbleSelectionUp()<CR>gv
     vnoremap <silent> <Down>  <Esc>:call BubbleSelectionDown()<CR>gv
     vnoremap <silent> <C-Up> <Esc>:call DelEmptyLineBelow()<CR>gv
