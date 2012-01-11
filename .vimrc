@@ -64,8 +64,8 @@ au BufReadPre * setlocal foldmethod=indent
 au BufWinEnter * if &fdm == 'indent' | setlocal foldmethod=manual | endif
 
 "automatically source the _vimrc file when writing it
-au BufWritePost _vimrc so $MYVIMRC
-au BufWritePost .vimrc so $MYVIMRC
+"au BufWritePost _vimrc so $MYVIMRC
+"au BufWritePost .vimrc so $MYVIMRC
 
 "delete cvs and fugitive diff buffers on close
 autocmd BufReadPost fugitive://* set bufhidden=delete
@@ -87,7 +87,8 @@ autocmd Filetype java,javascript,jsp nnoremap <buffer> <Leader>cwf :CVSWatchRemo
 "           Mappings             "
 """"""""""""""""""""""""""""""""""
 "<F4> to toggle most recently used documents window
-noremap  <silent> <F4> :if bufname("%") != "__MRU_FILES__"<Enter>MRU<Enter>else<Enter>exe"q" <Enter>endif<Enter> 
+"noremap  <silent> <F4> :if bufname("%") != "__MRU_FILES__"<Enter>MRU<Enter>else<Enter>exe"q" <Enter>endif<Enter> 
+nnoremap <silent> <F4> :CtrlPMRU<CR>
 "<F3> to execute the contents of register q -- useful when a macro is recorded
 "into register q
 nnoremap <F3> @q
@@ -112,10 +113,8 @@ nnoremap <Space> 10<c-e>
 nnoremap <S-Space> 10<c-y>
 vnoremap <Space> 10<c-e>
 vnoremap <S-Space> 10<c-y>
-"tab to jump to the minibufexpl window
-nnoremap <silent> <Tab> :BufExplorer<CR>
-"s-tab to open the bufexpl window in a split window
-nnoremap <silent> <S-Tab> :BufExplorerHorizontalSplit<CR> 
+"tab to open ctrlP in buffer mode
+nnoremap <silent> <Tab> :CtrlPBuffer<CR>
 "for some reason the above mapping of <Tab> overwrites <Ctrl-I>, this next
 "mapping restores it to <Ctrl-U>.
 nnoremap <C-U> <C-I>
@@ -197,6 +196,12 @@ hi Pmenu guifg=wheat guibg=#3f3f1f
 """""""""""""""""""""""""""""""""""""
 "      Plugin Configurations        "
 """""""""""""""""""""""""""""""""""""
+"Config for CtrlP:
+let g:ctrlp_root_markers = ['.vimdir']
+let g:ctrlp_working_path_mode = 0
+let g:ctrlp_custom_ignore = {
+  \ 'dir': 'Tomcat 6.0\\webapps\\JavaWeb'}
+let g:ctrlp_extensions = ['tag']
 "Config for NERDTree:
 nnoremap <silent> <F1> :NERDTreeToggle<CR>
 let g:NERDTreeQuitOnOpen = 1 "close NERDtree after opening a file
@@ -335,9 +340,10 @@ function! SmartTagJump(split)
         endtry
     endif
 endfunction
-nnoremap <silent> ]t :call SmartTagJump(0)<CR>
-nnoremap <silent> ]T :call SmartTagJump(1)<CR>
-nnoremap [t <C-t>
+"nnoremap <silent> ]t :call SmartTagJump(0)<CR>
+"nnoremap <silent> ]T :call SmartTagJump(1)<CR>
+"nnoremap [t <C-t>
+nnoremap ]t yiw:CtrlPTag<CR><C-R>*
 
 "redirect to output of a command to a scratch buffer
 "useful for spammy commands like :hi, :reg, :au
