@@ -24,7 +24,8 @@ au! dirsettings
 au dirsettings BufNewFile,BufReadPost * call SourceFileUpward('.vimdir')
 
 "
-" Search upward for the given file and source it.  This makes for a simpler
+" Search upward for the given file and source it. Also lcd to that file's
+" directory  This makes for a simpler
 " autocmd line.
 "
 func! SourceFileUpward(fname)
@@ -32,6 +33,7 @@ func! SourceFileUpward(fname)
     for l:fname in reverse(l:flist)
       if filereadable(l:fname)
           exe 'sou ' . l:fname
+          exe 'lcd ' . fnamemodify(l:fname, ":h")
       endif
     endfor
 endfunc
