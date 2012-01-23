@@ -1,7 +1,6 @@
 """"""""""""""""""""""""""""""""
 "        Preamble              "
 """"""""""""""""""""""""""""""""
-set fileformats=unix,dos
 set nocompatible
 if has("win32")
   set runtimepath+=~/.vim
@@ -63,10 +62,6 @@ autocmd BufRead  * normal zR
 au BufReadPre * setlocal foldmethod=indent
 au BufWinEnter * if &fdm == 'indent' | setlocal foldmethod=manual | endif
 
-"automatically source the _vimrc file when writing it
-"au BufWritePost _vimrc so $MYVIMRC
-"au BufWritePost .vimrc so $MYVIMRC
-
 "delete cvs and fugitive diff buffers on close
 autocmd BufReadPost fugitive://* set bufhidden=delete
 """"""""""""""""""""""""""""""""
@@ -87,7 +82,6 @@ autocmd Filetype java,javascript,jsp nnoremap <buffer> <Leader>cwf :CVSWatchRemo
 "           Mappings             "
 """"""""""""""""""""""""""""""""""
 "<F4> to toggle most recently used documents window
-"noremap  <silent> <F4> :if bufname("%") != "__MRU_FILES__"<Enter>MRU<Enter>else<Enter>exe"q" <Enter>endif<Enter> 
 nnoremap <silent> <F4> :CtrlPMRU<CR>
 "<F3> to execute the contents of register q -- useful when a macro is recorded
 "into register q
@@ -129,7 +123,7 @@ nnoremap <silent> S :call search('["'']\zs.\{-0,}["'']','b')<Enter>
 "jump to the next area enclosed by parentheses with g( and g)
 nnoremap <silent> g( :call search('(\zs.\{-0,})','')<Enter>
 nnoremap <silent> g) :call search('(\zs.\{-0,})','b')<Enter>
-"clear the search buffer with <leader><space>
+"clear highlighted search mathces with <leader><space>
 nnoremap <silent> <leader><space> :nohlsearch<CR>
 "use j and k to traverse editor lines instead of file lines.  useful when wrap
 "is turned on.
@@ -149,12 +143,7 @@ nnoremap <silent> <leader>n "='zthompso'<CR>p
 "Same as above two mappings for insert mode, but hit leader twice
 inoremap <silent> <leader><leader>t <C-R>=strftime("%m/%d/%Y")<CR><SPACE>
 inoremap <silent> <leader><leader>n zthompso<space>
-"Add a \v to searches to always use 'very magic' mode. all punctuation
-"characters will be interpreted as RegEx control characters.  Currently
-"disabled
-"nnoremap / /\v
-"nnoremap ? ?\v
-"use <leader>qt in normal mode to close the current tab
+"use <leader>qt in normal mode to quit the current tab
 nnoremap <silent> <leader>qt :tabc<Enter>
 "use gp to paste text and then select it in visual mode
 nnoremap <expr> gp '`[' . strpart(getregtype(), 0, 1) . '`]'
@@ -164,6 +153,7 @@ nnoremap <silent> <C-F11> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q -ft
 nnoremap VJ Vj
 "same for VK
 nnoremap VK Vk
+"paste from register 0, which contains the most recently yanked text
 nnoremap <silent> <leader>p "0p
 nnoremap <silent> <leader>P "0P
 vnoremap <silent> <leader>p "0p
@@ -202,11 +192,6 @@ let g:ctrlp_working_path_mode = 0
 let g:ctrlp_custom_ignore = {
   \ 'dir': 'Tomcat 6.0\\webapps\\JavaWeb'}
 let g:ctrlp_extensions = ['tag']
-"Config for NERDTree:
-nnoremap <silent> <F1> :NERDTreeToggle<CR>
-let g:NERDTreeQuitOnOpen = 1 "close NERDtree after opening a file
-"Config for MRU:
-let g:MRU_Ignore_Case = 1
 
 "Config for OmniCppComplete:
 let OmniCpp_NamespaceSearch = 2
