@@ -22,6 +22,7 @@ endif
 augroup dirsettings
 au! dirsettings
 au dirsettings BufNewFile,BufReadPost * call SourceFileUpward('.vimdir')
+au dirsettings BufReadPost .vimdir set filetype=vim
 
 "
 " Search upward for the given file and source it. Also lcd to that file's
