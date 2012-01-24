@@ -169,8 +169,6 @@ nnoremap <C-J> i<CR><ESC>
 "<leader>cd to change local current working directory to the directory of the
 "current file
 nnoremap <silent> <leader>cd :lcd %:p:h<CR>
-nnoremap <silent> > :cnext<CR>
-nnoremap <silent> < :cprevious<CR>
 
 """""""""""""""""""""""""
 "     color groups      "
