@@ -26,6 +26,7 @@ set writebackup "Don't leave backup around after writing the file
 set nowrap "no line wrapping (A mapping below binds <C-F6> to toggle line wrapping)
 set incsearch "incremental search
 set ic "ignore case for searches
+set hlsearch "highlight search results
 set smartcase "do not ignore case in search if the search query contains at least one uppercase letter
 set clipboard=unnamed "set the default register for pasting and yanking to the windows clipboard
 set diffexpr=MyDiff() "Standard diff expr
