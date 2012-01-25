@@ -36,7 +36,7 @@ set expandtab
 set autoindent
 set laststatus=2 "always show the status line
 set list "be in list mode
-set listchars=tab:>-,trail:· "display hard tabs as >--- and trailing spaces as ·
+set listchars=tab:>- "display hard tabs as >---
 " In many terminal emulators the mouse works just fine, thus enable it.
 if has('mouse')
   set mouse=a
