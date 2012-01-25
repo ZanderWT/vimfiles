@@ -12,6 +12,7 @@ filetype plugin indent on
 "          Set Options         "
 """"""""""""""""""""""""""""""""
 behave mswin
+syntax on "Switch syntax highlighting on, when the terminal has colors
 set backspace=indent,eol,start " allow backspacing over everything in insert mode
 set selection=inclusive "override 'selection' variable that is set to exclusive by behave mswin
 "set GUI options:
