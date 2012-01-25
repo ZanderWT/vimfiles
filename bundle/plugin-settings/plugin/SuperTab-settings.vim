@@ -3,3 +3,4 @@
 """""""""""""""""""""""""""""""""""""""""""""""
 
 let g:SuperTabDefaultCompletionType = "<c-x><c-u>"
+let g:SuperTabLongestHighlight = 1
