@@ -17,7 +17,7 @@ hi Normal guifg=#faf4c6 guibg=#3f3f3f
 
 " highlight groups
 hi Cursor       guibg=khaki guifg=slategrey
-hi DiffAdd      guibg=#4f4f4f gui=bold 
+hi DiffAdd      guibg=#4f4f4f gui=bold
 hi DiffDelete   guifg=black guibg=#4f4f4f gui=bold
 hi DiffChange   guibg=#5f4f5f gui=bold
 hi DiffText     guibg=#6f2f3f gui=bold
@@ -29,10 +29,10 @@ hi IncSearch    guifg=slategrey guibg=khaki gui=none
 hi LineNr       guifg=#ccccb0 guibg=#454545 gui=none
 hi ModeMsg      guifg=goldenrod gui=none
 hi MoreMsg      guifg=#EEEED0 guibg=red gui=none
-hi NonText      guifg=LightBlue guibg=grey30 gui=none
+hi NonText      guifg=grey50 gui=none
+hi SpecialKey   guifg=grey50 gui=none
 hi Question     guifg=springgreen gui=none
 hi Search       guifg=white guibg=peru gui=none
-hi SpecialKey   guifg=yellowgreen gui=none
 hi StatusLine   guifg=black guibg=tan gui=none
 hi StatusLineNC guifg=grey30 guibg=#c2bfa5 gui=none
 hi Title        guifg=indianred gui=none

@@ -35,6 +35,8 @@ set tabstop=2
 set expandtab
 set autoindent
 set laststatus=2 "always show the status line
+set list "be in list mode
+set listchars=tab:>-,trail:· "display hard tabs as >--- and trailing spaces as ·
 " In many terminal emulators the mouse works just fine, thus enable it.
 if has('mouse')
   set mouse=a
@@ -88,7 +90,7 @@ hi Pmenu guifg=wheat guibg=#3f3f1f
 " Only define it when not defined already.
 if !exists(":DiffOrig")
   command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
-		  \ | wincmd p | diffthis
+  \ | wincmd p | diffthis
 endif
 
 " Find file with search everything and edit it.
