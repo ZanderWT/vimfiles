@@ -36,7 +36,7 @@ set expandtab
 set autoindent
 set laststatus=2 "always show the status line
 set list "be in list mode
-set listchars=tab:>- "display hard tabs as >---
+set listchars=tab:>-,trail:· "display hard tabs as >--- and trailing spaces as ·
 " In many terminal emulators the mouse works just fine, thus enable it.
 if has('mouse')
   set mouse=a
@@ -63,7 +63,7 @@ if has("gui_running")
   autocmd GUIEnter * simalt ~x "start maximized
 endif
 "reveal all folds
-autocmd BufRead  * normal zR 
+autocmd BufRead  * normal zR
 "Create folds based on indent and then set foldmethod to manual when openeing
 "a buffer
 au BufReadPre * setlocal foldmethod=indent
@@ -88,7 +88,7 @@ hi link cOctal Number
 hi link javaParen Operator
 hi link javaParen1 Operator
 hi link javaParen2 Operator
-hi Pmenu guifg=wheat guibg=#3f3f1f 
+hi Pmenu guifg=wheat guibg=#3f3f1f
 
 """""""""""""""""""""""""""""""
 "        Functions            "
@@ -121,7 +121,7 @@ function! s:Find(name)
       let l:item = l:count.": ".l:item
       echo l:item
       let l:count+=1
-    endfor  
+    endfor
     let l:input=input("Which ? (CR=nothing)\n")
     if strlen(l:input)==0
       return
@@ -154,13 +154,13 @@ function! RedirectToScratch(cmd)
   :set buftype=nofile
   :set bufhidden=hide
   :setlocal noswapfile
-  redir => m 
-  silent exe a:cmd 
+  redir => m
+  silent exe a:cmd
   redir END
   put =m
 endfunction
 command! -nargs=1 RedirToScratch :call RedirectToScratch("<args>")
-nnoremap <leader>r :RedirToScratch 
+nnoremap <leader>r :RedirToScratch
 
 "This is the default Diffexpr.
 function! MyDiff()

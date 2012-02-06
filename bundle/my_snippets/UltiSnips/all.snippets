@@ -1,0 +1,14 @@
+#custom snippets for all filetypes
+snippet fixnotes "Bug/WO Fix notes template"
+`!v strftime("%m/%d/%Y")` zthompso:
+=======================================
+Programes Affected: ${1:BaseRMS} 4.4.${2:xx}.?
+Files used for build:
+$3
+RMS Options Affected:
+$0
+=======================================
+Description of the Change/Fix:
+$4
+
+endsnippet

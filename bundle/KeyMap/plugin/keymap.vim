@@ -40,8 +40,10 @@ nnoremap <silent> S :call search('["'']\zs.\{-0,}["'']','b')<Enter>
 "jump to the next area enclosed by parentheses with g( and g)
 nnoremap <silent> g( :call search('(\zs.\{-0,})','')<Enter>
 nnoremap <silent> g) :call search('(\zs.\{-0,})','b')<Enter>
-"clear highlighted search mathces with <leader><space>
+"clear highlighted search matches with <leader><space>
 nnoremap <silent> <leader><space> :nohlsearch<CR>
+"repeat last EX Command with <leader><space> 
+nnoremap <silent> <leader>. :<UP><CR>
 "use j and k to traverse editor lines instead of file lines.  useful when wrap
 "is turned on.
 nnoremap <silent> j gj
