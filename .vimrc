@@ -160,7 +160,7 @@ function! RedirectToScratch(cmd)
   put =m
 endfunction
 command! -nargs=1 RedirToScratch :call RedirectToScratch("<args>")
-nnoremap <leader>r :RedirToScratch
+nnoremap <leader>r :RedirToScratch 
 
 "This is the default Diffexpr.
 function! MyDiff()
