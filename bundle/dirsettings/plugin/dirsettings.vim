@@ -30,6 +30,7 @@ au dirsettings BufReadPost .vimdir set filetype=vim
 " autocmd line.
 "
 func! SourceFileUpward(fname)
+    exe 'lcd ' . escape(expand("%:p:h"), ' ')
     let l:flist=FindFileUpward(a:fname)
     for l:fname in reverse(l:flist)
       if filereadable(l:fname)
