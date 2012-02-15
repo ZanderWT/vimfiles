@@ -59,7 +59,7 @@ colorscheme plains "use the plains colorscheme
 """"""""""""""""""""""""""""""""""
 "         Autocommands           "
 """"""""""""""""""""""""""""""""""
-if has("gui_running")
+if has("gui_running") && has("win32")
   autocmd GUIEnter * simalt ~x "start maximized
 endif
 "reveal all folds
