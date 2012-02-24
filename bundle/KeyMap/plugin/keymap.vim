@@ -42,7 +42,7 @@ nnoremap <silent> g( :call search('(\zs.\{-0,})','')<Enter>
 nnoremap <silent> g) :call search('(\zs.\{-0,})','b')<Enter>
 "clear highlighted search matches with <leader><space>
 nnoremap <silent> <leader><space> :nohlsearch<CR>
-"repeat last EX Command with <leader><space> 
+"repeat last EX Command with <leader>.
 nnoremap <silent> <leader>. :<UP><CR>
 "use j and k to traverse editor lines instead of file lines.  useful when wrap
 "is turned on.
@@ -53,7 +53,7 @@ vnoremap <silent> k gk
 "Stay in visual mode when indenting text
 vnoremap > >gv
 vnoremap < <gv
-"<leader>v to edit this file
+"<leader>v to edit the vimrc
 nnoremap <silent> <leader>v :e $MYVIMRC<CR>
 "<leader>d to enter today's date
 nnoremap <silent> <leader>t "=strftime("%m/%d/%Y")<CR>p
