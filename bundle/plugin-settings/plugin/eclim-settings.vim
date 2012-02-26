@@ -20,6 +20,7 @@ nnoremap <silent> <leader>jmi :JavaImpl<CR>
 nnoremap <leader>jr :JavaRename 
 nnoremap <silent> <leader>jS :JavaSearch<CR>
 nnoremap <silent> <leader>js :JavaSearchContext<CR>
+nnoremap <silent> <leader>jf :%JavaFormat<CR>
 "]e and [e to jump to next and previous error
 "These use the quickfix list if it exists, otherwise the location list
 "the mapping requires this function, jumpToError
