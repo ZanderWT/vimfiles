@@ -54,6 +54,13 @@ set undofile "use persistent undofiles to keep track of undo history betweem vim
 set undodir=~/.vimundo
 set directory=~/.vimswp,. "use a separate directory for swap files
 set completeopt=menuone,longest
+"don't insert comment leaders automatically
+set formatoptions-=c
+set formatoptions-=r
+set formatoptions-=o
+"auto-wrap text using textwidth
+set formatoptions+=t
+set tw=80
 let mapleader="," "use , instead of \ in mappings with <leader>
 colorscheme plains "use the plains colorscheme
 """"""""""""""""""""""""""""""""""
