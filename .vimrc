@@ -58,9 +58,6 @@ set completeopt=menuone,longest
 set formatoptions-=c
 set formatoptions-=r
 set formatoptions-=o
-"auto-wrap text using textwidth
-set formatoptions+=t
-set tw=80
 let mapleader="," "use , instead of \ in mappings with <leader>
 colorscheme plains "use the plains colorscheme
 """"""""""""""""""""""""""""""""""
