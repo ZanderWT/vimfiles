@@ -15,9 +15,6 @@ nnoremap ; :
 "use : for the old functionality of ;
 nnoremap : ;
 vnoremap : ;
-"use ctrl + k, j to make windows taller or shorter
-nnoremap <C-k> 4<C-W>+
-nnoremap <C-j> 4<C-W>-
 "scroll left and right with H and L
 noremap L z40l
 noremap H z40h
