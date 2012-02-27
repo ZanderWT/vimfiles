@@ -51,8 +51,8 @@ if has("gui_running")
 endif
 set number "show line numbers
 set undofile "use persistent undofiles to keep track of undo history betweem vim sessions
-set undodir=~/.vimundo
-set directory=~/.vimswp,. "use a separate directory for swap files
+set undodir=~/.vim/.vimundo
+set directory=~/.vim/.vimswp,. "use a separate directory for swap files
 set completeopt=menuone,longest
 "don't insert comment leaders automatically
 set formatoptions-=c
