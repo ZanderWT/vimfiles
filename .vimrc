@@ -59,6 +59,8 @@ set formatoptions-=c
 set formatoptions-=r
 set formatoptions-=o
 let mapleader="," "use , instead of \ in mappings with <leader>
+"briefly highlight the matching bracket when typing a bracket
+set showmatch
 colorscheme plains "use the plains colorscheme
 """"""""""""""""""""""""""""""""""
 "         Autocommands           "
@@ -66,8 +68,8 @@ colorscheme plains "use the plains colorscheme
 if has("gui_running") && has("win32")
   autocmd GUIEnter * simalt ~x "start maximized
 endif
-"reveal all folds
-autocmd BufRead  * normal zR
+"start with a very high foldlevel
+set foldlevel=999
 "Create folds based on indent and then set foldmethod to manual when openeing
 "a buffer
 au BufReadPre * setlocal foldmethod=indent
