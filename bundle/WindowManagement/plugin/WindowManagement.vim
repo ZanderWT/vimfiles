@@ -21,6 +21,11 @@ nnoremap <C-w>k              :call WinMove('k')<cr>
 nnoremap <C-w>l              :call WinMove('l')<cr>
 nnoremap <C-w>j              :call WinMove('j')<cr>
 
+nnoremap <C-w><C-h>              :call WinMove('h')<cr>
+nnoremap <C-w><C-k>              :call WinMove('k')<cr>
+nnoremap <C-w><C-l>              :call WinMove('l')<cr>
+nnoremap <C-w><C-j>              :call WinMove('j')<cr>
+
 nnoremap <C-w>H              :wincmd H<cr>
 nnoremap <C-w>K              :wincmd K<cr>
 nnoremap <C-w>L              :wincmd L<cr>
