@@ -15,18 +15,18 @@ function! WinMove(key)
     exec "wincmd ".a:key
   endif
 endfunction
- 
-nnoremap <C-w>h              :call WinMove('h')<cr>
-nnoremap <C-w>k              :call WinMove('k')<cr>
-nnoremap <C-w>l              :call WinMove('l')<cr>
-nnoremap <C-w>j              :call WinMove('j')<cr>
 
-nnoremap <C-w><C-h>              :call WinMove('h')<cr>
-nnoremap <C-w><C-k>              :call WinMove('k')<cr>
-nnoremap <C-w><C-l>              :call WinMove('l')<cr>
-nnoremap <C-w><C-j>              :call WinMove('j')<cr>
+nnoremap <silent><C-w>h              :call WinMove('h')<cr>
+nnoremap <silent><C-w>k              :call WinMove('k')<cr>
+nnoremap <silent><C-w>l              :call WinMove('l')<cr>
+nnoremap <silent><C-w>j              :call WinMove('j')<cr>
 
-nnoremap <C-w>H              :wincmd H<cr>
-nnoremap <C-w>K              :wincmd K<cr>
-nnoremap <C-w>L              :wincmd L<cr>
-nnoremap <C-w>J              :wincmd J<cr>
+nnoremap <silent><C-w><C-h>          :call WinMove('h')<cr>
+nnoremap <silent><C-w><C-k>          :call WinMove('k')<cr>
+nnoremap <silent><C-w><C-l>          :call WinMove('l')<cr>
+nnoremap <silent><C-w><C-j>          :call WinMove('j')<cr>
+
+nnoremap <silent><C-w>H              :wincmd H<cr>
+nnoremap <silent><C-w>K              :wincmd K<cr>
+nnoremap <silent><C-w>L              :wincmd L<cr>
+nnoremap <silent><C-w>J              :wincmd J<cr>
