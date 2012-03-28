@@ -54,10 +54,6 @@ set undofile "use persistent undofiles to keep track of undo history betweem vim
 set undodir=~/.vim/.vimundo
 set directory=~/.vim/.vimswp,. "use a separate directory for swap files
 set completeopt=menuone,longest
-"don't insert comment leaders automatically
-set formatoptions-=c
-set formatoptions-=r
-set formatoptions-=o
 let mapleader="," "use , instead of \ in mappings with <leader>
 "briefly highlight the matching bracket when typing a bracket
 set showmatch
