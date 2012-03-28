@@ -1087,7 +1087,8 @@ function! s:SQLU_WrapLongLines()
     " many lines as necessary and lined up with the other columns
     let linenum = line("'y+1")
 
-    return
+    "zthompso:why was this here?
+    "return
 
     let org_textwidth = &textwidth
     if &textwidth == 0 
