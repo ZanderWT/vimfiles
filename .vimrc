@@ -1,11 +1,12 @@
 """"""""""""""""""""""""""""""""
 "        Preamble              "
 """"""""""""""""""""""""""""""""
+let pathogen_bundle_dir = '~/.vim/bundle'
 set nocompatible
 if has("win32")
   set runtimepath+=~/.vim
 endif
-call pathogen#infect('~/.vim/bundle')
+call pathogen#infect(pathogen_bundle_dir)
 filetype plugin indent on
 
 """"""""""""""""""""""""""""""""
