@@ -7,6 +7,8 @@ let g:EclimSignLevel=2 "suppress warnings
 let g:EclimValidateSortResults='severity' "sort validation problems by severity
 let g:EclimJavaImportPackageSeparationLevel=0 "don't add newlines between import statements
 let g:EclimXmlValidate=0 "don't validate xml files
+let g:EclimJavascriptValidate=0 "don't validate javascript files
+let g:EclimJavascriptLintEnabled=0 "don't validate javascript files, seriously
 
 "mappings:
 "all the mappings start with <leader>j
