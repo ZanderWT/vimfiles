@@ -30,14 +30,20 @@ au dirsettings BufReadPost .vimdir set filetype=vim
 " autocmd line.
 "
 func! SourceFileUpward(fname)
-    exe 'lcd ' . escape(expand("%:p:h"), ' ')
-    let l:flist=FindFileUpward(a:fname)
-    for l:fname in reverse(l:flist)
-      if filereadable(l:fname)
-          exe 'sou ' . l:fname
-          exe 'lcd ' . fnamemodify(l:fname, ":h")
-      endif
-    endfor
+    "added a try/catch block to make the command fail silently in buffers
+    "without a valid working directory
+    try
+        exe 'lcd ' . escape(expand("%:p:h"), ' ')
+        let l:flist=FindFileUpward(a:fname)
+        for l:fname in reverse(l:flist)
+          if filereadable(l:fname)
+              exe 'sou ' . l:fname
+              exe 'lcd ' . fnamemodify(l:fname, ":h")
+          endif
+        endfor
+    catch
+
+    endtry
 endfunc
 
 "
