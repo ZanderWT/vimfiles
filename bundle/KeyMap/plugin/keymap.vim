@@ -85,4 +85,5 @@ nnoremap <C-J> i<CR><ESC>
 "<leader>cd to change local current working directory to the directory of the
 "current file
 nnoremap <silent> <leader>cd :lcd %:p:h<CR>:pwd<CR>
-
+"<Backspace> to jump back through the edit list
+nnoremap <BS> g;
