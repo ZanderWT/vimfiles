@@ -6,7 +6,7 @@
 "into register q
 nnoremap <F3> @q
 "<C-F6> toggles line-wrapping
-nnoremap <silent> <C-F6> :set invwrap<Enter>:set invlinebreak<Enter>
+nnoremap <silent> <C-F6> :set invwrap<Enter>:set invlinebreak<Enter>:set invlist<Enter>
 "<F9> shows the color group of the identifier under the cursor
 noremap <C-F9> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<' . synIDattr(synID(line("."),col("."),0),"name") . "> lo<" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
 "<C-F7> to run :make
