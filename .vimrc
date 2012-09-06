@@ -44,7 +44,7 @@ endif
 
 if has("gui_running")
   if has("gui_win32")
-    set guifont=Bitstream_Vera_Sans_Mono:h9,Courier_New:h9 "set font to bitstream vera sans mono if it's available, otherwise use courier new
+    set guifont=DejaVu_Sans_Mono:h9:cANSI,Courier_New:h9 "set font to bitstream vera sans mono if it's available, otherwise use courier new
   elseif has("gui_gtk2")
     set guifont=Bitstream\ Vera\ Sans\ Mono\ 10
   endif
