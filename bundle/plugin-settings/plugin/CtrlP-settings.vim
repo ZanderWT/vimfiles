@@ -5,7 +5,9 @@
 let g:ctrlp_root_markers = ['.vimdir']
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_custom_ignore = {
-  \ 'dir': 'Tomcat 6.0\\webapps\\JavaWeb'}
+  \ 'dir': '\v[\/](\.git|\.hg|\.svn|build)$',
+  \ 'file': '\.class$'
+  \ }
 let g:ctrlp_extensions = ['tag']
 
 "<F4> to toggle most recently used documents window
