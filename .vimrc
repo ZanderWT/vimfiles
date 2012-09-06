@@ -2,6 +2,8 @@
 "        Preamble              "
 """"""""""""""""""""""""""""""""
 set nocompatible
+"set encoding to utf8 to display special characters
+set encoding=utf8
 if has("win32")
   set runtimepath+=~/.vim
 endif
@@ -36,7 +38,7 @@ set expandtab
 set autoindent
 set laststatus=2 "always show the status line
 set list "be in list mode
-set listchars=tab:>-,trail:· "display hard tabs as >--- and trailing spaces as ·
+set listchars=tab:>-,trail:Â· "display hard tabs as >--- and trailing spaces as Â·
 " In many terminal emulators the mouse works just fine, thus enable it.
 if has('mouse')
   set mouse=a
@@ -57,6 +59,9 @@ set completeopt=menuone,longest
 let mapleader="," "use , instead of \ in mappings with <leader>
 "briefly highlight the matching bracket when typing a bracket
 set showmatch
+set showbreak=â”‚
+"make vertical splits look nice
+set fillchars=vert:\ ,fold:-
 colorscheme plains "use the plains colorscheme
 """"""""""""""""""""""""""""""""""
 "         Autocommands           "
