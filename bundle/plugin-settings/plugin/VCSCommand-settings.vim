@@ -2,7 +2,7 @@
 "    Plugin Configurations for VCSCommand     "
 """""""""""""""""""""""""""""""""""""""""""""""
 
-let g:VCSCommandEnableBufferSetup=1
+let g:VCSCommandEnableBufferSetup=0
 autocmd Filetype java,javascript,jsp call <SID>doVCSCommandMappings()
 
 function! s:doVCSCommandMappings()
