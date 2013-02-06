@@ -50,6 +50,6 @@ endfunc
 " Search upward for the given file.
 "
 func! FindFileUpward(fname)
-    let l:flist=findfile(a:fname, escape(expand("%:p:h"), ' ') . ';', -1)
+    let l:flist=findfile(a:fname, escape(expand("%:p:h"), ' ') . '.;', -1)
     return l:flist
 endfunc
