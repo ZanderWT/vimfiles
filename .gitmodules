@@ -10,9 +10,6 @@
 [submodule "bundle/pydoc"]
 	path = bundle/pydoc
 	url = git://github.com/fs111/pydoc.vim.git
-[submodule "bundle/LustyExplorer"]
-	path = bundle/LustyExplorer
-	url = git://github.com/vim-scripts/LustyExplorer.git
 [submodule "bundle/gundo"]
 	path = bundle/gundo
 	url = git://github.com/sjl/gundo.vim.git
