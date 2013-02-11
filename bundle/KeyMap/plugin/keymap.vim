@@ -25,9 +25,6 @@ nnoremap <Space> 10<c-e>
 nnoremap <S-Space> 10<c-y>
 vnoremap <Space> 10<c-e>
 vnoremap <S-Space> 10<c-y>
-"for some reason the above mapping of <Tab> overwrites <Ctrl-I>, this next
-"mapping restores it to <Ctrl-U>.
-nnoremap <C-U> <C-I>
 "` to jump to the next buffer
 nnoremap <silent> ` :bnext<CR>
 nnoremap <silent> ~ :bprev<CR>
@@ -89,3 +86,5 @@ nnoremap <C-J> i<CR><ESC>
 nnoremap <silent> <leader>cd :lcd %:p:h<CR>:pwd<CR>
 "<Backspace> to jump back through the edit list
 nnoremap <BS> g;
+"close xml/html tags
+inoremap <leader><leader>/ </<C-X><C-O>

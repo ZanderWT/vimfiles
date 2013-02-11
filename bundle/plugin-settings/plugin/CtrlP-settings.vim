@@ -9,7 +9,7 @@ let g:ctrlp_custom_ignore = {
   \ 'file': '\.class$'
   \ }
 let g:ctrlp_extensions = ['tag']
-
+let g:ctrlp_max_files = 50000
 "<F4> to toggle most recently used documents window
 nnoremap <silent> <F4> :CtrlPMRU<CR>
 
