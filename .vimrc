@@ -22,6 +22,7 @@ set guioptions+=b "enable horizontal scrollbar
 set guioptions-=m  "remove menu bar
 set guioptions-=T  "remove toolbar
 set guioptions+=c  "Use console dialogs instead of popups
+set guioptions-=l  "don't have a left-hand scrollbar
 set confirm "confirm save/discard/cancel when abandoning a buffer
 set nobackup "Don't leave backup around after writing the file
 set writebackup "Don't leave backup around after writing the file
@@ -45,11 +46,14 @@ if has('mouse')
 endif
 
 if has("gui_running")
+  colorscheme plains "use the plains colorscheme
   if has("gui_win32")
     set guifont=DejaVu_Sans_Mono:h9:cANSI,Courier_New:h9 "set font to bitstream vera sans mono if it's available, otherwise use courier new
   elseif has("gui_gtk2")
     set guifont=Bitstream\ Vera\ Sans\ Mono\ 10
   endif
+else
+  colorscheme zenburn
 endif
 set number "show line numbers
 set undofile "use persistent undofiles to keep track of undo history betweem vim sessions
@@ -62,7 +66,6 @@ set showmatch
 set showbreak=│
 "make vertical splits look nice
 set fillchars=vert:\ ,fold:-
-colorscheme plains "use the plains colorscheme
 """"""""""""""""""""""""""""""""""
 "         Autocommands           "
 """"""""""""""""""""""""""""""""""
