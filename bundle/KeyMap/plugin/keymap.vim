@@ -88,3 +88,5 @@ nnoremap <silent> <leader>cd :lcd %:p:h<CR>:pwd<CR>
 nnoremap <BS> g;
 "close xml/html tags
 inoremap <leader><leader>/ </<C-X><C-O>
+"sudo write
+cmap w!! %!sudo tee >/dev/null %
