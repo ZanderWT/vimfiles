@@ -56,8 +56,10 @@ else
   colorscheme zenburn
 endif
 set number "show line numbers
-set undofile "use persistent undofiles to keep track of undo history betweem vim sessions
-set undodir=~/.vim/.vimundo
+if version >= 703
+  set undofile "use persistent undofiles to keep track of undo history betweem vim sessions
+  set undodir=~/.vim/.vimundo
+endif
 set directory=~/.vim/.vimswp,. "use a separate directory for swap files
 set completeopt=menuone,longest
 let mapleader="," "use , instead of \ in mappings with <leader>
