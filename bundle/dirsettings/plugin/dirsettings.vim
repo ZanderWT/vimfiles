@@ -21,7 +21,7 @@ endif
 " end up with multiple autocmd entries if this file is sourced more than once.
 augroup dirsettings
 au! dirsettings
-au dirsettings BufNewFile,BufReadPost * call SourceFileUpward('.vimdir')
+au dirsettings VimEnter,BufNewFile,BufReadPost * call SourceFileUpward('.vimdir')
 au dirsettings BufReadPost .vimdir set filetype=vim
 
 "
@@ -50,6 +50,6 @@ endfunc
 " Search upward for the given file.
 "
 func! FindFileUpward(fname)
-    let l:flist=findfile(a:fname, escape(expand("%:p:h"), ' ') . '.;', -1)
+    let l:flist=findfile(a:fname, '.;', -1)
     return l:flist
 endfunc
