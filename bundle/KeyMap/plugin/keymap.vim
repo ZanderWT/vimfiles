@@ -5,8 +5,9 @@
 "<F3> to execute the contents of register q -- useful when a macro is recorded
 "into register q
 nnoremap <F3> @q
-"<C-F6> toggles line-wrapping
+"<C-F6> or <leader><F6> toggles line-wrapping
 nnoremap <silent> <C-F6> :setlocal invwrap<Enter>:setlocal invlinebreak<Enter>:setlocal invlist<Enter>
+nnoremap <silent> <leader><F6> :setlocal invwrap<Enter>:setlocal invlinebreak<Enter>:setlocal invlist<Enter>
 "<F9> shows the color group of the identifier under the cursor
 noremap <C-F9> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<' . synIDattr(synID(line("."),col("."),0),"name") . "> lo<" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
 "<C-F7> to run :make
@@ -53,16 +54,16 @@ vnoremap < <gv
 nnoremap <silent> <leader>v :e $MYVIMRC<CR>
 "<leader>d to enter today's date
 nnoremap <silent> <leader>t "=strftime("%m/%d/%Y")<CR>p
-"<leader>n to enter 'zthompso'
-nnoremap <silent> <leader>n "='zthompso'<CR>p
+"<leader>n to enter 'Zander Wilson-Thompson'
+nnoremap <silent> <leader>n "='Zander Wilson-Thompson'<CR>p
 "Same as above two mappings for insert mode, but hit leader twice
 inoremap <silent> <leader><leader>t <C-R>=strftime("%m/%d/%Y")<CR><SPACE>
-inoremap <silent> <leader><leader>n zthompso<space>
+inoremap <silent> <leader><leader>n Zander Wilson-Thompson<space>
 "use <leader>qt in normal mode to quit the current tab
 nnoremap <silent> <leader>qt :tabc<Enter>
 "use gp to paste text and then select it in visual mode
 nnoremap <expr> gp '`[' . strpart(getregtype(), 0, 1) . '`]'
-"<F3> to rebuild tag file in the current directory
+"<c-F11>> to rebuild tag file in the current directory
 nnoremap <silent> <C-F11> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q -ftags .<CR>
 "in visual mode, VJ mapped to Vj.  I always hit VJ by accident when I really mean Vj.
 nnoremap VJ Vj

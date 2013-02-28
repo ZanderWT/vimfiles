@@ -26,18 +26,22 @@ set guioptions-=l  "don't have a left-hand scrollbar
 set confirm "confirm save/discard/cancel when abandoning a buffer
 set nobackup "Don't leave backup around after writing the file
 set writebackup "Don't leave backup around after writing the file
-set nowrap "no line wrapping (A mapping below binds <C-F6> to toggle line wrapping)
+set nowrap "no line wrapping (A mapping in keymap.vim binds <C-F6> to toggle line wrapping)
 set incsearch "incremental search
 set ic "ignore case for searches
 set hlsearch "highlight search results
 set smartcase "do not ignore case in search if the search query contains at least one uppercase letter
-set clipboard=unnamed "set the default register for pasting and yanking to the windows clipboard
+"set the default register for pasting and yanking to the windows clipboard
+if has('unnamedplus')
+  set clipboard=unnamedplus
+else
+  set clipboard=unnamed
+endif
 set shiftwidth=2
 set tabstop=2
 set expandtab
 set autoindent
 set laststatus=2 "always show the status line
-set list "be in list mode
 set listchars=tab:>-,trail:· "display hard tabs as >--- and trailing spaces as ·
 " In many terminal emulators the mouse works just fine, thus enable it.
 if has('mouse')
