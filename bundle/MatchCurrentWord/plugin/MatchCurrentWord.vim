@@ -2,6 +2,8 @@
 "plugin to always highlight the current word
 hi clear MatchCurrentWord
 hi MatchCurrentWord guibg=#4f4f4f 
+hi MatchCurrentWord ctermbg=238
+
 augroup MatchCurrentWord
   au!
   au CursorMoved * call MatchWord()

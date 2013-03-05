@@ -13,3 +13,7 @@ function! EclimJavaFormat()
 endfunction
 
 setlocal formatexpr=EclimJavaFormat()
+
+hi link javaStorageClass statement
+hi link Exception statement
+hi link typedef statement
