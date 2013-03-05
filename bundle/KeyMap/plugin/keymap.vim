@@ -10,6 +10,7 @@ nnoremap <silent> <C-F6> :setlocal invwrap<Enter>:setlocal invlinebreak<Enter>:s
 nnoremap <silent> <leader><F6> :setlocal invwrap<Enter>:setlocal invlinebreak<Enter>:setlocal invlist<Enter>
 "<F9> shows the color group of the identifier under the cursor
 noremap <C-F9> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<' . synIDattr(synID(line("."),col("."),0),"name") . "> lo<" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
+noremap <leader><F9> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<' . synIDattr(synID(line("."),col("."),0),"name") . "> lo<" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
 "<C-F7> to run :make
 nnoremap <C-F7> :make<CR>
 "use ; to enter command line mode
