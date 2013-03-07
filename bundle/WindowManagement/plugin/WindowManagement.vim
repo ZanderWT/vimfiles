@@ -26,7 +26,7 @@ nnoremap <silent><C-w><C-k>          :call WinMove('k')<cr>
 nnoremap <silent><C-w><C-l>          :call WinMove('l')<cr>
 nnoremap <silent><C-w><C-j>          :call WinMove('j')<cr>
 
-nnoremap <silent><C-w>H              :wincmd H<cr>
-nnoremap <silent><C-w>K              :wincmd K<cr>
-nnoremap <silent><C-w>L              :wincmd L<cr>
-nnoremap <silent><C-w>J              :wincmd J<cr>
+nnoremap <silent><C-w>H              10:wincmd <<cr>
+nnoremap <silent><C-w>K              10:wincmd +<cr>
+nnoremap <silent><C-w>L              10:wincmd ><cr>
+nnoremap <silent><C-w>J              10:wincmd -<cr>
