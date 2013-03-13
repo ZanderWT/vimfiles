@@ -31,3 +31,6 @@
 [submodule "bundle/tagbar"]
 	path = bundle/tagbar
 	url = git://github.com/majutsushi/tagbar
+[submodule "bundle/git-gutter"]
+	path = bundle/git-gutter
+	url = git://github.com/airblade/vim-gitgutter.git
