@@ -25,8 +25,10 @@ noremap H z40h
 "scroll up and down, keeping the cursor in the same spot, with <Space> and <S-Space>
 nnoremap <Space> 10<c-e>
 nnoremap <S-Space> 10<c-y>
+nnoremap K 10<c-y>
 vnoremap <Space> 10<c-e>
 vnoremap <S-Space> 10<c-y>
+vnoremap K 10<c-y>
 "` to jump to the next buffer
 nnoremap <silent> ` :bnext<CR>
 nnoremap <silent> ~ :bprev<CR>
