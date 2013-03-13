@@ -5,6 +5,7 @@ let g:taglisttoo_disabled = 1
 let g:EclimTaglistEnabled = 0
 let g:EclimValidateSortResults='severity' "sort validation problems by severity
 let g:EclimJavaImportPackageSeparationLevel=0 "don't add newlines between import statements
+let g:EclimJavaSearchSingleResult='edit' "open single search results in the current window
 "let g:EclimJavascriptValidate=0 "don't validate javascript files
 "let g:EclimJavascriptLintEnabled=0 "don't validate javascript files, seriously
 "let g:EclimSignLevel=2 "suppress warnings
@@ -22,6 +23,7 @@ nnoremap <silent> <leader>jmi :JavaImpl<CR>
 nnoremap <leader>jr :JavaRename 
 nnoremap <silent> <leader>jS :JavaSearch<CR>
 nnoremap <silent> <leader>js :JavaSearchContext<CR>
+nnoremap <silent> <leader>jis :JavaSearch -x implementors<CR>
 nnoremap <silent> <leader>jf :%JavaFormat<CR>
 "]e and [e to jump to next and previous error
 "These use the quickfix list if it exists, otherwise the location list
