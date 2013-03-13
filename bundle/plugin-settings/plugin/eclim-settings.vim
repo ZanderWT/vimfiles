@@ -18,7 +18,6 @@ nnoremap <silent> <leader>jc :JavaCorrect<CR>
 nnoremap <silent> <leader>jd :JavaDocSearch<CR>
 nnoremap <silent> <leader>jic :JavaImportClean<CR>
 nnoremap <silent> <leader>jim :JavaImportOrganize<CR>
-nnoremap <silent> <leader>jis :JavaImportSort<CR>
 nnoremap <silent> <leader>jmi :JavaImpl<CR>
 nnoremap <leader>jr :JavaRename 
 nnoremap <silent> <leader>jS :JavaSearch<CR>
